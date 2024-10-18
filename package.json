@@ -1,5 +1,5 @@
 {
-    "homepage": "",
+    "homepage": "https://github.com/JustineMHIL28/Portfolio.git",
     "name": "portfolio",
     "version": "0.1.0",
     "private": true,
@@ -61,6 +61,6 @@
         "@babel/core": "^7.25.8",
         "@babel/preset-env": "^7.25.8",
         "@babel/preset-react": "^7.25.7",
-        "gh-pages": "^6.1.1"
+        "gh-pages": "^6.2.0"
     }
 }
