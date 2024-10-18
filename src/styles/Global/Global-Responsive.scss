@@ -1,0 +1,44 @@
+.module-page {
+  overflow: hidden; /* Disable default scrolling */
+  padding: 0 18%;
+
+  .section {
+    height: 100vh; /* Each section takes full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for transform and opacity */
+  }
+
+  .section-overview,
+  .section-technologies,
+  .section-projects,
+  .section-career,
+  .section-footer {
+    position: relative;
+  }
+
+  .main-page {
+    position: relative;
+    height: 100vh; /* Full height for the main page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* RESPONSIVE STYLES */
+
+/* For tablets and medium-sized screens */
+@media screen and (max-width: 768px) {
+  .module-page {
+    padding: 0 18%; /* Default padding for larger screens */
+  }
+}
+
+/* For mobile phones and small screens */
+@media screen and (max-width: 480px) {
+  .module-page {
+    padding: 0 10%; /* Default padding for larger screens */
+  }
+}
