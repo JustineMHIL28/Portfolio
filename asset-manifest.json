@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/JustineMHIL28/Portfolio.git/static/css/main.dcf8b560.css",
+    "main.js": "/JustineMHIL28/Portfolio.git/static/js/main.6cad65c6.js",
+    "static/media/jjk.jpg": "/JustineMHIL28/Portfolio.git/static/media/jjk.01c221bbbf6147efcd5f.jpg",
+    "index.html": "/JustineMHIL28/Portfolio.git/index.html",
+    "main.dcf8b560.css.map": "/JustineMHIL28/Portfolio.git/static/css/main.dcf8b560.css.map",
+    "main.6cad65c6.js.map": "/JustineMHIL28/Portfolio.git/static/js/main.6cad65c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dcf8b560.css",
+    "static/js/main.6cad65c6.js"
+  ]
+}

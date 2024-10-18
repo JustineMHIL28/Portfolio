@@ -1,0 +1,166 @@
+{
+  "overviewData": [
+    {
+      "id": 1,
+      "name": "Website Development",
+      "image": "/assets/just-icon/website-development.png",
+      "description": "Building websites from start to finish using various technologies.",
+      "link": "https://example.com/website-development"
+    },
+    {
+      "id": 2,
+      "name": "Software Development",
+      "image": "/assets/just-icon/software-development-.png",
+      "description": "Creating software applications for various platforms.",
+      "link": "https://example.com/software-development"
+    },
+    {
+      "id": 3,
+      "name": "Third-Party Integration",
+      "image": "/assets/just-icon/thrid-party.png",
+      "description": "Integrating third-party services and APIs into existing applications.",
+      "link": "https://example.com/third-party-integration"
+    }
+  ],
+
+  "technologiesData": [
+    {
+      "id": 1,
+      "name": "HTML",
+      "image": "/assets/dev-icon/html5.png",
+      "description": "Markup language for creating web pages.",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
+      "id": 2,
+      "name": "CSS",
+      "image": "/assets/dev-icon/css.png",
+      "description": "Style sheet language for beautifying web pages.",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+      "id": 3,
+      "name": "AntDesign",
+      "image": "/assets/dev-icon/ant-design.png",
+      "description": "UI design language and React UI library providing pre-designed components.",
+      "link": "https://ant.design/"
+    },
+    {
+      "id": 4,
+      "name": "MySql",
+      "image": "/assets/dev-icon/mysql.png",
+      "description": "Relational database management system for data storage.",
+      "link": "https://www.mysql.com/"
+    },
+    {
+      "id": 5,
+      "name": "MsSql",
+      "image": "/assets/dev-icon/mssql.png",
+      "description": "Database management system from Microsoft.",
+      "link": "https://www.microsoft.com/en-us/sql-server/sql-server-downloads"
+    },
+    {
+      "id": 6,
+      "name": "ReactJS",
+      "image": "/assets/dev-icon/react-js.png",
+      "description": "JavaScript library for building user interfaces.",
+      "link": "https://reactjs.org/"
+    },
+    {
+      "id": 7,
+      "name": "Node.js",
+      "image": "/assets/dev-icon/node-js.png",
+      "description": "JavaScript runtime used for server-side development.",
+      "link": "https://nodejs.org/"
+    },
+    {
+      "id": 8,
+      "name": "JavaScript",
+      "image": "/assets/dev-icon/js.png",
+      "description": "Programming language used in web development.",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      "id": 9,
+      "name": "TypeScript",
+      "image": "/assets/dev-icon/ts.png",
+      "description": "A superset of JavaScript that provides static typing.",
+      "link": "https://www.typescriptlang.org/"
+    },
+    {
+      "id": 10,
+      "name": "Git",
+      "image": "/assets/dev-icon/git.png",
+      "description": "Version control system for tracking changes in source code.",
+      "link": "https://git-scm.com/"
+    }
+  ],
+
+  "projectsData": [
+    {
+      "id": 1,
+      "name": "Portfolio Website",
+      "image": "/assets/project-icon/peso.png",
+      "subimage": "/assets/project-icon/portfolio.JPG",
+      "link": "https://example.com/portfolio",
+      "description": "A full-stack application for managing software projects, tracking issues, and collaborating across teams."
+    }
+  ],
+
+  "careerData": [
+    {
+      "id": 1,
+      "name": "Software Engineer",
+      "duration": "Nov 2021 - Jan 2023",
+      "image": "/assets/company-icon/gp-next-solution-inc.png",
+      "link": "https://web.facebook.com/gpnext2020/?_rdc=1&_rdr",
+      "description": "Designed, developed, and maintained web applications, ensuring efficient, reusable, and reliable code. Collaborated with cross-functional teams in various aspects of development, including front-end, back-end, and database design."
+    },
+    {
+      "id": 2,
+      "name": "Junior Programmer",
+      "duration": "June 2023 - Dec 2023",
+      "image": "/assets/company-icon/lloyd-laboratoties-inc.jpeg",
+      "link": "https://lloydlab.com/",
+      "description": "Managed several software projects, ensuring on-time delivery and quality output while mentoring junior developers."
+    }
+  ],
+
+  "footerData": [
+    {
+      "id": 1,
+      "name": "JustHIL1996",
+      "image": "/assets/social-icon/logo.png",
+      "link": "https://lloydlab.com/",
+      "description": "Personal website of Justine M."
+    },
+    {
+      "id": 2,
+      "name": "Gmail",
+      "image": "/assets/social-icon/email.png",
+      "link": "https://mail.google.com/mail/u/0/#inbox",
+      "description": "Contact me via email."
+    },
+    {
+      "id": 3,
+      "name": "Facebook",
+      "image": "/assets/social-icon/facebook.png",
+      "link": "https://www.facebook.com/justine1996",
+      "description": "Check out my profile on Facebook."
+    },
+    {
+      "id": 4,
+      "name": "GitHub",
+      "image": "/assets/social-icon/github.png",
+      "link": "https://github.com/JustineM1996",
+      "description": "Explore my projects on GitHub."
+    },
+    {
+      "id": 5,
+      "name": "Indeed",
+      "image": "/assets/social-icon/indeed.webp",
+      "link": "https://www.indeed.com/",
+      "description": "Check out my profile on Indeed."
+    }
+  ]
+}
