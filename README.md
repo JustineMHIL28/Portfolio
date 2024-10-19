@@ -4,13 +4,6 @@
 
 Hi, I'm **Hilario Justine M.**, a 27-year-old Web Developer from Malolos, Bulacan. This portfolio project showcases my skills in building efficient and reliable web applications. It demonstrates my expertise in various technologies, including **HTML**, **CSS**, **JavaScript**, and **ReactJS**.
 
-## Work Experience
-Here’s a quick rundown of my work experience as a web developer. This portfolio highlights several projects I've worked on and the skills I've developed over time.
-
-## Projects
-
-- **Portfolio Website** A dynamic and responsive portfolio showcasing my web development skills. Built with ReactJS, the website features a modular design with interactive elements, reflecting my professional capabilities.
-
 ## Technologies Used
 
 - **HTML**: For structuring the web pages.
@@ -20,6 +13,14 @@ Here’s a quick rundown of my work experience as a web developer. This portfoli
 - **Redux**: For state management in complex applications.
 - **Node.js**: For backend development and API creation.
 - **RESTful APIs**: For communication between the client and server.
+
+## Projects
+
+- **Portfolio Website**: A dynamic and responsive portfolio showcasing my web development skills. Built with ReactJS, the website features a modular design with interactive elements, reflecting my professional capabilities.
+
+## Work Experience
+
+Here’s a quick rundown of my work experience as a web developer. This portfolio highlights several projects I've worked on and the skills I've developed over time.
 
 ## Features
 
