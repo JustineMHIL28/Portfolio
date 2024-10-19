@@ -1,5 +1,5 @@
 {
-    "homepage": "",
+    "homepage": "https://justinemhil28.github.io/Portfolio/",
     "name": "portfolio",
     "version": "0.1.0",
     "private": true,
@@ -37,7 +37,7 @@
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://justinemhil28.github.io/Portfolio/"
     },
     "eslintConfig": {
         "extends": [
