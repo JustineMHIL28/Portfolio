@@ -2,7 +2,14 @@
 
 ## About
 
-Hi, I'm Hilario Justine M., a 27-year-old Web Developer from Malolos, Bulacan. This portfolio project showcases my skills in building efficient and reliable web applications. It demonstrates my expertise in various technologies, including HTML, CSS, JavaScript, and ReactJS.
+Hi, I'm **Hilario Justine M.**, a 27-year-old Web Developer from Malolos, Bulacan. This portfolio project showcases my skills in building efficient and reliable web applications. It demonstrates my expertise in various technologies, including **HTML**, **CSS**, **JavaScript**, and **ReactJS**.
+
+## Work Experience
+Here’s a quick rundown of my work experience as a web developer. This portfolio highlights several projects I've worked on and the skills I've developed over time.
+
+## Projects
+
+- **Portfolio Website** A dynamic and responsive portfolio showcasing my web development skills. Built with ReactJS, the website features a modular design with interactive elements, reflecting my professional capabilities.
 
 ## Technologies Used
 
@@ -25,7 +32,17 @@ Hi, I'm Hilario Justine M., a 27-year-old Web Developer from Malolos, Bulacan. T
 
 To run this project locally, follow these steps:
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/JustineMHIL28/Portfolio.git
-# Portfolio
+
+2. **Navigate into the project directory**: cd Portfolio
+
+3. **Install dependencies**: npm install
+
+4. **Start the development server**: npm start
+
+The project should now be running on http://localhost:3000/.
+
+## Conclusion
+Thank you for visiting my portfolio! If you'd like to connect or discuss potential collaborations, feel free to reach out via email at justinem.hil@gmail.com.
