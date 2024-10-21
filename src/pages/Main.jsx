@@ -8,31 +8,40 @@ import { ARRAY } from "../constants/array.js";
 import { STRING } from "../constants/string.js";
 
 export const MainPage = () => {
+  // Fetch all data using the custom hook
   const { data: useFetchAllData } = useFetch.useFetchData();
+  
+  // State to hold the original fetched data
   const [originalData, setOriginalData] = useState({});
-
-  // Set original data when fetched data changes
-  useEffect(() => {
-    setOriginalData(useFetchAllData || {});
-  }, [useFetchAllData]);
-
+  
+  // Access the current theme from context
   const { theme } = useTheme();
-  const style = theme === 'dark' ? { background: '#333', color: 'white' } : { background: '#e9e9e9e9', color: 'black' };
-
-  // Scroll to the next section when the user scrolls down
-  const handleScroll = (event) => {
-    if (event.deltaY > 0) {
-      const nextSection = document.querySelector('.section:not(.hidden)');
-      if (nextSection) nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  
+  // Define styles based on the current theme
+  const style = { 
+    background: theme === 'dark' ? '#333' : '#e9e9e9', 
+    color: theme === 'dark' ? 'white' : 'black' 
   };
 
   useEffect(() => {
-    window.addEventListener('wheel', handleScroll);
-    return () => window.removeEventListener('wheel', handleScroll);
-  }, []);
+    // Update original data when fetched data changes
+    setOriginalData(useFetchAllData || {});
 
-  console.log("Original Data:", originalData); // Debugging: log original data
+    // Function to handle scroll events
+    const handleScroll = (event) => {
+      if (event.deltaY > 0) {
+        // Scroll to the next visible section
+        const nextSection = document.querySelector('.section:not(.hidden)');
+        nextSection && nextSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    // Add event listener for wheel scroll
+    window.addEventListener('wheel', handleScroll);
+    
+    // Cleanup function to remove event listener on component unmount
+    return () => window.removeEventListener('wheel', handleScroll);
+  }, [useFetchAllData]);
 
   return (
     <div className='module-page'>
@@ -43,104 +52,32 @@ export const MainPage = () => {
         </div>
       </div>
 
-      {/* Render Overview Section */}
-      <div className="section section-overview">
-        {FETCH.section({
-          style,
-          type: STRING.overview,
-          title: STRING.overviewTitle,
-          subtitle: STRING.introductionSubTitle,
-          disableSubtitle: false,
-          description: ARRAY.descriptions?.find(desc => desc.type === 'overview')?.content,
-          disableDescription: false,
-          data: originalData.overviewData || [],
-          disableDataImage: false,
-          disableDataSubImage: true,
-          disableDataDescription: true,
-          disableDataLink: true,
-          disableDataTooltips: true,
-        })}
-      </div>
-
-      {/* Render Technologies Section */}
-      <div className="section section-technologies">
-        {FETCH.section({
-          style,
-          type: STRING.technologies,
-          title: STRING.technologiesTitle,
-          subtitle: STRING.myskillsSubTitle,
-          description: ARRAY.descriptions?.find(desc => desc.type === 'technologies')?.content,
-          disableSubtitle: false,
-          disableDescription: false,
-          // for data
-          data: originalData.technologiesData || [],
-          disableDataImage: false,
-          disableDataSubImage: true,
-          disableDataDescription: true,
-          disableDataLink: false,
-          disableDataTooltips: true,
-        })}
-      </div>
-
-      {/* Render Projects Section */}
-      <div className="section section-projects">
-        {FETCH.section({
-          style,
-          type: STRING.projects,
-          title: STRING.projectsTitle,
-          subtitle: STRING.projectsSubTitle,
-          description: ARRAY.descriptions?.find(desc => desc.type === 'projects')?.content,
-          disableSubtitle: true,
-          disableDescription: false,
-          // for data
-          data: originalData.projectsData || [],
-          disableDataImage: true,
-          disableDataSubImage: false,
-          disableDataDescription: false,
-          disableDataLink: false,
-          disableDataTooltips: true,
-        })}
-      </div>
-
-      {/* Render Work Experience Section with Career Details */}
-      <div className="section section-career">
-        {FETCH.section({
-          style,
-          type: STRING.career,
-          title: STRING.careerTitle,
-          subtitle: STRING.workexperienceSubTitle,
-          description: ARRAY.descriptions?.find(desc => desc.type === 'career')?.content,
-          disableSubtitle: false,
-          disableDescription: false,
-          // for data
-          data: originalData.careerData || [],
-          disableDataImage: false,
-          disableDataSubImage: true,
-          disableDataDescription: false,
-          disableDataLink: false,
-          disableDataTooltips: true,
-        })}
-      </div>
-
-      {/* Render Footer Section */}
-      <div className="section section-footer">
-        {FETCH.section({
-          style,
-          type: STRING.footer,
-          title: "FIND ME ON !",
-          subtitle: "",
-          description: "",
-          disableSubtitle: true,
-          disableDescription: true,
-          // for data
-          data: originalData.footerData || [],
-          disableDataImage: false,
-          disableDataSubImage: true,
-          disableDataDescription: true,
-          disableDataLink: false,
-          disableDataTooltips: false,
-        })}
-      </div>
+      {/* Render Sections */}
+      {[
+        STRING.overview, 
+        STRING.technologies, 
+        STRING.projects, 
+        STRING.career, 
+        STRING.footer
+      ].map((section, index) => (
+        <div className={`section section-${section}`} key={index}>
+          {FETCH.section({
+            style,
+            type: STRING[section], // Set the type of the section
+            title: STRING[`${section}Title`], // Set the title of the section
+            subtitle: STRING[`${section}SubTitle`], // Set the subtitle of the section
+            description: ARRAY.descriptions?.find(desc => desc.type === section)?.content, // Get the description from the array
+            disableSubtitle: true, // Disable subtitle
+            disableDescription: section === STRING.footer, // Disable description for footer section
+            data: originalData[`${section}Data`] || [], // Get the data for the section
+            disableDataImage: section === STRING.projects, // Disable image for projects section
+            disableDataSubImage: [STRING.overview, STRING.technologies, STRING.career, STRING.footer].includes(section), 
+            disableDataDescription: [STRING.overview, STRING.technologies, STRING.footer].includes(section), // Disable sub images for specific sections
+            disableDataLink: section === STRING.overview, // Disable link for overview section
+            disableDataTooltips: [STRING.overview, STRING.technologies, STRING.projects, STRING.career].includes(section), // Disable tooltips for specific sections
+          })}
+        </div>
+      ))}
     </div>
   );
 };
