@@ -7,7 +7,7 @@ export const ARRAY = {
           type: 'overview',
           content: (
               <>
-                  <p>I’m Hilario Justine M., a 27-year-old Web Developer from Malolos, Bulacan. With a passion for technology, I specialize in building efficient and reliable web applications. I have experience in various technologies, including HTML, CSS, JavaScript, and ReactJS, allowing me to create dynamic user experiences.</p>
+                  <p>I’m Hilario Justine M., a 27yrs old Web Developer from Malolos, Bulacan. With a passion for technology, I specialize in building efficient and reliable web applications. I have experience in various technologies, including HTML, CSS, JavaScript, and ReactJS, allowing me to create dynamic user experiences.</p>
                   <p style={{ marginTop: '10px' }}>
                       I thrive on continuous learning and enjoy collaborating with others to deliver high-quality projects. When I'm not coding, I love exploring new tech trends and sharing insights with fellow developers.
                   </p>

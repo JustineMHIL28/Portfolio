@@ -10,6 +10,7 @@ function App() {
 
   return (
     <div className={`app-container ${theme}`}> {/* Applying theme class to the main container */}
+      <MainPage /> {/* Rendering the MainPage component */}
       <button 
         className={`float-button ${theme}`} // Styling for the floating button
         onClick={toggleTheme} // Event handler to toggle theme
@@ -22,7 +23,6 @@ function App() {
           <MoonOutlined className="theme-icon" /> // Moon icon for dark mode
         )}
       </button>
-      <MainPage /> {/* Rendering the MainPage component */}
     </div>
   );
 }

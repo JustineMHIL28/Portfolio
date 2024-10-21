@@ -7,7 +7,7 @@ Hi, I'm **Hilario Justine M.**, a 27-year-old Web Developer from Malolos, Bulaca
 ## Technologies Used
 
 - **HTML**: For structuring the web pages.
-- **CSS**: For styling and layout, ensuring a responsive design.
+- **SCSS**: For styling and layout, ensuring a responsive design.
 - **JavaScript**: For adding interactivity and dynamic content.
 - **ReactJS**: For building user interfaces and managing component state effectively.
 - **Redux**: For state management in complex applications.
