@@ -3,13 +3,13 @@ import React from "react";
 import { Image } from "antd";
 
 const renderCard = (
-    { style, type, disableDataImage, disableDataSubImage, disableDataDescription, disableDataLink, disableDataTooltips },
+    { style, theme, type, disableDataImage, disableDataSubImage, disableDataDescription, disableDataLink, disableDataTooltips },
     { name, description, image, subimage, duration, link }
 ) => {
     console.log("Rendering card:", { name, description, image, subimage, duration, link });
 
     return (
-        <div style={style} className={`infoCard${type}Page`}>
+        <div style={style} className={`infoCard${type}Page ${theme}`}>
             <div className={`group${type}Page`}>
                 {/* Render main image with optional link and tooltip */}
                 {!disableDataImage && (

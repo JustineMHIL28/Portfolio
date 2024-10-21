@@ -19,7 +19,7 @@ export const MainPage = () => {
   
   // Define styles based on the current theme
   const style = { 
-    background: theme === 'dark' ? '#333' : '#e9e9e9', 
+    background: theme === 'dark' ? '#333' : '#d6d6d6', 
     color: theme === 'dark' ? 'white' : 'black' 
   };
 
@@ -62,7 +62,7 @@ export const MainPage = () => {
       ].map((section, index) => (
         <div className={`section section-${section}`} key={index}>
           {FETCH.section({
-            style,
+            style, theme,
             type: STRING[section], // Set the type of the section
             title: section === STRING.footer ? "Find Me Out !" : STRING[`${section}Title`], // Set the title of the section
             subtitle: STRING[`${section}SubTitle`], // Set the subtitle of the section
