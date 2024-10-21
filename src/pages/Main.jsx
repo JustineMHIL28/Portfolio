@@ -64,7 +64,7 @@ export const MainPage = () => {
           {FETCH.section({
             style,
             type: STRING[section], // Set the type of the section
-            title: STRING[`${section}Title`], // Set the title of the section
+            title: section === STRING.footer ? "Find Me Out !" : STRING[`${section}Title`], // Set the title of the section
             subtitle: STRING[`${section}SubTitle`], // Set the subtitle of the section
             description: ARRAY.descriptions?.find(desc => desc.type === section)?.content, // Get the description from the array
             disableSubtitle: true, // Disable subtitle
