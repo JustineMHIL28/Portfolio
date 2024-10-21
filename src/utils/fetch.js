@@ -7,14 +7,14 @@ import { STRING } from "../constants/string.js";
 export const FETCH = {
   section: ({
     title, subtitle, disableSubtitle, description, disableDescription, data,
-    style, type, disableDataImage, disableDataSubImage, disableDataDescription, disableLink, disableTooltips
+    style, type, disableDataImage, disableDataSubImage, disableDataDescription, disableDataLink, disableDataTooltips
   }) => {
     
     // InfoCard properties to be passed
     const infoCardProps = { 
       style, type,
       disableDataImage, disableDataSubImage, disableDataDescription,
-      disableLink, disableTooltips
+      disableDataLink, disableDataTooltips
     };
 
     // Function to render InfoCards

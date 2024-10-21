@@ -43,14 +43,14 @@ $item-font-family: 'Inter', sans-serif; // Example using Google Font
       bottom: 125%; /* Position above the link */
       left: 50%; /* Center horizontally */
       transform: translateX(-50%); /* Offset to center */
-      transition: opacity 0.3s; /* Fade effect */
+      transition: opacity 0.3s, visibility 0.3s; // Isama ang visibility sa transition
       z-index: 10; /* Ensure tooltip is above other elements */
     }
   }
 }
 
 // Mixin for group styles inside cards
-@mixin groupPage($flex-direction, $gap) {
+@mixin groupPage($flex-direction: row, $gap) {
   display: flex;
   align-items: center;
   flex-direction: $flex-direction;

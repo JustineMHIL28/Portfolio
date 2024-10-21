@@ -3,51 +3,56 @@ import React from "react";
 import { Image } from "antd";
 
 const renderCard = (
-    { style, type, disableDataImage, disableDataSubImage, disableDataDescription, disableLink, disableTooltips },
+    { style, type, disableDataImage, disableDataSubImage, disableDataDescription, disableDataLink, disableDataTooltips },
     { name, description, image, subimage, duration, link }
-) => (
-    <div style={style} className={`infoCard${type}Page`}>
-        <div className={`group${type}Page`}>
-            {!disableDataImage && (
+) => {
+    console.log("Rendering card:", { name, description, image, subimage, duration, link });
+
+    return (
+        <div style={style} className={`infoCard${type}Page`}>
+            <div className={`group${type}Page`}>
+                {/* Render main image with optional link and tooltip */}
+                {!disableDataImage && (
+                    <>
+                        {disableDataLink ? (
+                            <>
+                                <Image className={`${type}Image`} src={`${process.env.PUBLIC_URL}/${image}`} preview={false} />
+                                {!disableDataTooltips && <div className="tooltip">{name}</div>}
+                            </>
+                        ) : (
+                            <a href={link}>
+                                <Image className={`${type}Image`} src={`${process.env.PUBLIC_URL}/${image}`} preview={false} />
+                                {!disableDataTooltips && <div className="tooltip">{name}</div>}
+                            </a>
+                        )}
+                    </>
+                )}
+                <div className={`${type}Name`}>
+                    {name}
+                    {duration && <div className={`${type}Date`}>{duration}</div>}
+                </div>
+            </div>
+            {/* Render subimage with optional link and tooltip */}
+            {!disableDataSubImage && (
                 <>
-                    {!disableLink ? (
-                        <a href={link}>
-                            <Image className={`${type}Image`} src={image} preview={false} />
-                            {!disableTooltips && <div className="tooltip">{name}</div>}
-                        </a>
-                    ) : (
+                    {disableDataLink ? (
                         <>
-                            <Image className={`${type}Image`} src={image} preview={false} />
-                            {!disableTooltips && <div className="tooltip">{name}</div>}
+                            <Image className={`${type}SubImage`} src={`${process.env.PUBLIC_URL}/${subimage}`} preview={false} />
+                            {!disableDataTooltips && <div className="tooltip">{name}</div>}
                         </>
+                    ) : (
+                        <a href={link}>
+                            <Image className={`${type}SubImage`} src={`${process.env.PUBLIC_URL}/${subimage}`} preview={false} />
+                            {!disableDataTooltips && <div className="tooltip">{name}</div>}
+                        </a>
                     )}
                 </>
             )}
-            <div className={`${type}Name`}>
-                {name}
-                {duration && <div className={`${type}Date`}>{duration}</div>}
-            </div>
+            {/* Render description if not disabled */}
+            {!disableDataDescription && <div className={`${type}Desc`}>{description}</div>}
         </div>
-        {!disableDataSubImage && (
-            <>
-                {!disableLink ? (
-                    <a href={link}>
-                        <Image className={`${type}SubImage`} src={subimage} preview={false} />
-                        {!disableTooltips && <div className="tooltip">{name}</div>}
-                    </a>
-                ) : (
-                    <>
-                        <Image className={`${type}SubImage`} src={subimage} preview={false} />
-                        {!disableTooltips && <div className="tooltip">{name}</div>}
-                    </>
-                )}
-            </>
-        )}
-        {!disableDataDescription && (
-            <div className={`${type}Desc`}>{description}</div>
-        )}
-    </div>
-);
+    );
+};
 
 export const INFOCARD = {
     main: renderCard,

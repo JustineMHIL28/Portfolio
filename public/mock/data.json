@@ -101,7 +101,7 @@
       "id": 1,
       "name": "Portfolio Website",
       "image": "/assets/project-icon/peso.png",
-      "subimage": "/assets/project-icon/portfolio.JPG",
+      "subimage": "/assets/project-icon/portfolio.png",
       "link": "https://example.com/portfolio",
       "description": "A personal portfolio showcasing my web development projects, skills, and experience. This site highlights the work I've done with various technologies, including HTML, CSS, JavaScript, and React, and features details on past projects, my technical expertise, and ways to get in touch."
     }
@@ -152,7 +152,7 @@
       "id": 4,
       "name": "GitHub",
       "image": "/assets/social-icon/github.png",
-      "link": "https://github.com/JustineM1996",
+      "link": "https://github.com/JustineMHIL28",
       "description": "Explore my projects on GitHub."
     },
     {
