@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="footer"> {/* Main footer element with a class name */}
       <div className="footer-content"> {/* Container for footer content */}
-        <p> &copy; 2024 Justine M. Hilario. All rights reserved.</p> {/* Copyright information */}
+        <p> &copy; 2024 JustineMHil28. All rights reserved.</p> {/* Copyright information */}
       </div>
     </footer>
   );
