@@ -2,32 +2,33 @@
 
 ## About
 
-Hi, I'm **Hilario Justine M.**, a 27-year-old Web Developer from Malolos, Bulacan. This portfolio project showcases my skills in building efficient and reliable web applications. It demonstrates my expertise in various technologies, including **HTML**, **CSS**, **JavaScript**, and **ReactJS**.
+Hi, I'm **Hilario Justine M.**, a 27yrs old Web Developer from Malolos, Bulacan. This portfolio project showcases my skills in building efficient and reliable web applications. It demonstrates my expertise in various technologies, including **HTML**, **CSS**, **JavaScript (JS)**, and **React**.
 
 ## Technologies Used
 
-- **HTML**: For structuring the web pages.
-- **SCSS**: For styling and layout, ensuring a responsive design.
-- **JavaScript**: For adding interactivity and dynamic content.
-- **ReactJS**: For building user interfaces and managing component state effectively.
-- **Redux**: For state management in complex applications.
-- **Node.js**: For backend development and API creation.
-- **RESTful APIs**: For communication between the client and server.
+- **HTML**: 
+  - The foundation of my portfolio, providing a clear structure for the content and ensuring a logical flow of information.
+
+- **SCSS**: 
+  - Employed for styling the website, SCSS enhances the design with responsive layouts and maintainable styles through the use of variables and nested rules.
+
+- **JavaScript (JS)**: 
+  - Adds interactivity to the portfolio, enabling dynamic content and enhancing user experience through features like image sliders and smooth transitions.
+
+- **React**: 
+  - Utilized to build the user interface, allowing for the creation of reusable components and effective state management, which results in a responsive and seamless experience for visitors.
 
 ## Projects
 
 - **Portfolio Website**: A dynamic and responsive portfolio showcasing my web development skills. Built with ReactJS, the website features a modular design with interactive elements, reflecting my professional capabilities.
 
 ## Work Experience
-
 Here’s a quick rundown of my work experience as a web developer. This portfolio highlights several projects I've worked on and the skills I've developed over time.
 
 ## Features
-
-- **Dynamic User Experience**: Users can interact with the application in real-time with smooth transitions.
-- **Responsive Design**: The application is optimized for different devices and screen sizes.
-- **Modular Components**: Components are reusable and maintainable, adhering to best practices in software development.
-- **Skill Showcase**: A dedicated section highlighting the technologies I've worked with, along with relevant projects.
+- Responsive design for optimal viewing on various devices.
+- Interactive elements to engage users and enhance navigation.
+- Organized presentation of projects with images, descriptions, and links.
 
 ## Getting Started
 

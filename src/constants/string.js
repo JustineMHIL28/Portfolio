@@ -1,5 +1,8 @@
+// Developer: Justine M. Hilario
+
 export const STRING = {
 
+    // TYPES
     ...[
         'overview', 'technologies', 'projects', 'career', 'footer',
         'introduction', 'my skills', 'work experience', 'find me on'

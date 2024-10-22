@@ -1,3 +1,5 @@
+// Developer: Justine M. Hilario
+
 import './styles/App/App-Responsive.scss'; // Importing styles for the App component
 import React from "react"; // Importing React library
 import { MainPage } from './pages/Main.jsx'; // Importing the MainPage component

@@ -1,3 +1,5 @@
+// Developer: Justine M. Hilario
+
 import '../styles/Main/Main-Responsive.scss';
 import React from 'react';
 import { INFOCARD } from "../components/InfoCard.jsx";
@@ -7,13 +9,13 @@ import { STRING } from "../constants/string.js";
 export const FETCH = {
   section: ({
     title, subtitle, disableSubtitle, description, disableDescription, data,
-    style, theme, type, disableDataImage, disableDataSubImage, disableDataDescription, disableDataLink, disableDataTooltips
+    style, theme, type, disableDataImage, disableDataSubImage, disableDataTechImage, disableDataDescription, disableDataLink, disableDataTooltips
   }) => {
     
     // InfoCard properties to be passed
     const infoCardProps = { 
       style, theme, type,
-      disableDataImage, disableDataSubImage, disableDataDescription,
+      disableDataImage, disableDataSubImage, disableDataTechImage, disableDataDescription,
       disableDataLink, disableDataTooltips
     };
 
@@ -46,7 +48,7 @@ export const FETCH = {
           {/* Title display */}
           <div className={`${STRING[type]}Title`}>{title}</div>
           {/* Description display */}
-          {!disableDescription && <p className={`${STRING[type]}Description`}>{description}</p>}
+          {!disableDescription && <div className={`${STRING[type]}Description`}>{description}</div>}
           {/* Render InfoCards */}
           <div className={`${STRING[type]}InfoCard`}>{renderCards()}</div>
         </div>

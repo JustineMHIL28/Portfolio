@@ -1,3 +1,5 @@
+// Developer: Justine M. Hilario
+
 import '../styles/Global/Global-Responsive.scss'; 
 import '../styles/Main/Main-Responsive.scss'; 
 import React, { useState, useEffect } from 'react';
@@ -71,7 +73,8 @@ export const MainPage = () => {
             disableDescription: section === STRING.footer, // Disable description for footer section
             data: originalData[`${section}Data`] || [], // Get the data for the section
             disableDataImage: section === STRING.projects, // Disable image for projects section
-            disableDataSubImage: [STRING.overview, STRING.technologies, STRING.career, STRING.footer].includes(section), 
+            disableDataSubImage: [STRING.overview, STRING.technologies, STRING.career, STRING.footer].includes(section),
+            disableDataTechImage: [STRING.overview, STRING.technologies, STRING.career, STRING.footer].includes(section),
             disableDataDescription: [STRING.overview, STRING.technologies, STRING.footer].includes(section), // Disable sub images for specific sections
             disableDataLink: section === STRING.overview, // Disable link for overview section
             disableDataTooltips: [STRING.overview, STRING.technologies, STRING.projects, STRING.career].includes(section), // Disable tooltips for specific sections

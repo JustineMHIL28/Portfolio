@@ -1,3 +1,5 @@
+// Developer: Justine M. Hilario
+
 import React, { createContext, useContext, useState } from 'react';
 
 // Lumikha ng Theme Context

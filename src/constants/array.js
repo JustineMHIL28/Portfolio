@@ -1,3 +1,5 @@
+// Developer: Justine M. Hilario
+
 // Define an object named ARRAY to hold various descriptions
 export const ARRAY = {
   // Array of description objects

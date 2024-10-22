@@ -1,22 +1,21 @@
+const path = require('path');
+
 module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader', // Gumagamit ng style-loader para sa pag-inject ng CSS sa DOM
-          'css-loader',   // Gumagamit ng css-loader para i-process ang CSS
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require('sass'), // Gumagamit ng Dart Sass
-              sassOptions: {
-                // Idagdag ang mga bagong options dito kung kinakailangan
-              },
+    entry: './src/index.js',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+    },
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader', // Injects styles into DOM
+                    'css-loader',   // Turns CSS into JS
+                    'sass-loader',  // Compiles Sass to CSS
+                ],
             },
-          },
         ],
-      },
-    ],
-  },
+    },
 };
