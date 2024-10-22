@@ -99,7 +99,7 @@
   "projectsData": [
     {
       "id": 1,
-      "name": "Portfolio Website",
+      "name": "Portfolio",
       "image": "/assets/project-icon/peso.png",
       "subimage": "/assets/project-icon/portfolio.png",
       "techimage": [
@@ -109,7 +109,7 @@
         "/assets/dev-icon/js.png"
       ],
       "link": "https://example.com/portfolio",
-      "description": "A personal portfolio showcasing my web development projects, skills, and experience. This site highlights the work I've done with various technologies, including HTML, SCSS, and React JS."
+      "description": "My portfolio demonstrates my expertise in web development through a collection of projects. It highlights my skills in technologies such as HTML, SCSS, JavaScript (JS), and React, showcasing a variety of responsive and dynamic web applications."
     }
   ],
 
