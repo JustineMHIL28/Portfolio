@@ -61,7 +61,7 @@
     },
     {
       "id": 6,
-      "name": "ReactJS",
+      "name": "React",
       "image": "/assets/dev-icon/react-js.png",
       "description": "JavaScript library for building user interfaces.",
       "link": "https://reactjs.org/"
@@ -102,8 +102,14 @@
       "name": "Portfolio Website",
       "image": "/assets/project-icon/peso.png",
       "subimage": "/assets/project-icon/portfolio.png",
+      "techimage": [
+        "/assets/dev-icon/html5.png",
+        "/assets/dev-icon/css.png",
+        "/assets/dev-icon/react-js.png",
+        "/assets/dev-icon/js.png"
+      ],
       "link": "https://example.com/portfolio",
-      "description": "A personal portfolio showcasing my web development projects, skills, and experience. This site highlights the work I've done with various technologies, including HTML, CSS, JavaScript, and React, and features details on past projects, my technical expertise, and ways to get in touch."
+      "description": "A personal portfolio showcasing my web development projects, skills, and experience. This site highlights the work I've done with various technologies, including HTML, SCSS, and React JS."
     }
   ],
 
