@@ -93,6 +93,23 @@ $app-text-color: #000000;
   }
 }
 
+/* Custom scrollbar styles */
+::-webkit-scrollbar { /* Style for the scrollbar */
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track { /* Style for the track of the scrollbar */
+  background:  #333; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb { /* Style for the draggable part of the scrollbar */
+  background: rgba(255, 255, 255, 0.8); /* Color of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover { /* Style for the scrollbar thumb on hover */
+  background: rgba(255, 255, 255, 1); /* Color when hovered */
+}
+
 // // styles/App/App-Responsive.scss
 // $app-background-color: #e9e9e9; // Background color variable
 // $app-text-color: #000000; // Text color variable
@@ -167,20 +184,3 @@ $app-text-color: #000000;
 //     }
 //   }
 // }
-
-/* Custom scrollbar styles */
-::-webkit-scrollbar { /* Style for the scrollbar */
-  width: 12px; /* Width of the scrollbar */
-}
-
-::-webkit-scrollbar-track { /* Style for the track of the scrollbar */
-  background:  #333; /* Background color of the scrollbar track */
-}
-
-::-webkit-scrollbar-thumb { /* Style for the draggable part of the scrollbar */
-  background: rgba(255, 255, 255, 0.8); /* Color of the scrollbar thumb */
-}
-
-::-webkit-scrollbar-thumb:hover { /* Style for the scrollbar thumb on hover */
-  background: rgba(255, 255, 255, 1); /* Color when hovered */
-}

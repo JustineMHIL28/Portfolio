@@ -1,8 +1,7 @@
 # Project Title: My Portfolio Website
 
 ## About
-
-Hi, I'm **Hilario Justine M.**, a 27yrs old Web Developer from Malolos, Bulacan. This portfolio project showcases my skills in building efficient and reliable web applications. It demonstrates my expertise in various technologies, including **HTML**, **CSS**, **JavaScript (JS)**, and **React**.
+I’m Justine M. Hilario, a 27-year-old Web Developer with a passion for technology. I specialize in building efficient and reliable web applications, using various technologies such as **HTML**, **CSS**, **JavaScript (JS)**, and **React** to create dynamic and user-friendly experiences.
 
 ## Technologies Used
 
@@ -30,8 +29,19 @@ Here’s a quick rundown of my work experience as a web developer. This portfoli
 - Interactive elements to engage users and enhance navigation.
 - Organized presentation of projects with images, descriptions, and links.
 
-## Getting Started
+## Assets Used
 
+### Wallpaper
+The background wallpaper used in this project is from [Wallpapers Clan](https://wallpapers-clan.com).
+- [Jujutsu Kaisen Gojo Red Wallpaper](https://wallpapers-clan.com/desktop-wallpapers/jujutsu-kaisen-gojo-red/)
+
+### Icons
+The icons used in this project are from [Flaticon](https://www.flaticon.com). Below are the specific icons and their authors:
+- [Font-end Icon](https://www.flaticon.com/free-icon/web-programming_1336979) by [Freepik](https://www.freepik.com)
+- [Back-end Icon](https://www.flaticon.com/free-icon/web-programming_1336989) by [Freepik](https://www.freepik.com)
+- [APIs Icon](https://www.flaticon.com/free-icon/cable_5885575) by [Freepik](https://www.freepik.com)
+
+## Getting Started
 To run this project locally, follow these steps:
 
 1. **Clone the repository**:
