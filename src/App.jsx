@@ -5,6 +5,7 @@ import React from "react"; // Importing React library
 import { MainPage } from './pages/Main.jsx'; // Importing the MainPage component
 import { useTheme } from './utils/ThemeContext'; // Importing custom hook for theme management
 import { MoonOutlined, SunOutlined } from '@ant-design/icons'; // Importing icons for theme toggle
+import Footer from './components/Footer.jsx'; // Importing the Footer component
 
 function App() {
   // Accessing current theme and function to toggle theme from context
@@ -25,6 +26,7 @@ function App() {
           <MoonOutlined className="theme-icon" /> // Moon icon for dark mode
         )}
       </button>
+      <Footer /> {/* Rendering the Footer component */} 
     </div>
   );
 }
