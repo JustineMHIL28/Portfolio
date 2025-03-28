@@ -1,0 +1,25 @@
+.module-page {
+  overflow: hidden; /* Disable default scrolling */
+
+  .section-overview,
+  .section-technologies,
+  .section-projects,
+  .section-career,
+  .section-footer {
+    position: relative;
+    padding: 0 18%;
+    height: 100vh; /* Each section takes full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for transform and opacity */
+  }
+
+  .main-page {
+    position: relative;
+    height: 100vh; /* Full height for the main page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

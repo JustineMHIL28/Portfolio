@@ -1,0 +1,490 @@
+$icon-size: 16px;
+$item-font-size: 14px;
+$item-font-family: 'Inter', sans-serif; // Example using Google Font
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; // Adjust to parent container
+  max-width: 800px; // Set a max width if needed
+  margin: 0 auto; // Center it horizontally
+
+  video {
+    width: 100%; // Responsive width
+    height: auto; // Auto adjust height based on aspect ratio
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Optional: Add a subtle shadow
+  }
+}
+
+// Mixin for info card page styles
+@mixin infoCardPage($width: auto, $height: auto, $padding: 0) {
+  width: $width;
+  height: $height;
+  padding: $padding;
+  border-radius: 5px;
+  flex: 1;
+  line-height: 1.3;
+  transition: transform 0.1s, box-shadow 0.1s;
+  
+  // Hover effect for dark mode
+  &.dark {
+    &:hover {
+      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.336); // Light shadow below button
+    }
+  }
+
+  // Hover effect for light mode
+  &.light {
+    &:hover {
+      box-shadow: 0 2px 4px rgba(10, 10, 10, 0.634); // Dark shadow below button
+    }
+  }
+
+  a {
+    text-decoration: none; /* Removes underline from link */
+    position: relative; /* Required for tooltip positioning */
+
+    &:hover .tooltip {
+      visibility: visible; /* Shows tooltip on hover */
+      opacity: 1; /* Fade in effect */
+    }
+
+    .tooltip {
+      font-size: 12px;
+      font-family: $item-font-family;
+      letter-spacing: 0.5px;
+      visibility: hidden; /* Hidden by default */
+      opacity: 0; /* Fully transparent */
+      background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+      color: #fff; /* White text */
+      text-align: center; /* Center the text */
+      border-radius: 5px; /* Rounded corners */
+      padding: 5px 10px; /* Padding around the text */
+      position: absolute; /* Absolute positioning */
+      bottom: 125%; /* Position above the link */
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Offset to center */
+      transition: opacity 0.3s, visibility 0.3s; // Isama ang visibility sa transition
+      z-index: 10; /* Ensure tooltip is above other elements */
+    }
+  }
+}
+
+// Mixin for group styles inside cards
+@mixin groupPage($gap) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+// Mixin for image styles inside groups
+@mixin groupImage($width, $height, $padding, $margin) {
+  width: $width;
+  height: $height;
+  padding: $padding;
+  margin: $margin;
+}
+
+// Mixin for sub image styles inside groups
+@mixin groupSubImage($padding, $margin, $display: block) {
+  padding: $padding;
+  margin: $margin;
+  display: $display;
+}
+
+@mixin groupTechImage($padding, $margin, $display: block) {
+  width: 23px;
+  height: 23px;
+  padding: $padding;
+  margin: $margin;
+  display: $display;
+}
+
+// Mixin for name styles
+@mixin groupName($font-size, $margin, $display: block) {
+  font-size: $font-size;
+  font-family: $item-font-family;
+  margin: $margin;
+  display: $display;
+  flex: 1;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+// Mixin for description styles
+@mixin groupDescription($font-size, $padding, $margin, $display) {
+  font-size: $font-size;
+  font-family: $item-font-family;
+  padding: $padding;
+  margin: $margin;
+  display: $display;
+  flex: 1;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-weight: 500; // Slightly bolder font for better readability
+  opacity: 0.6;
+  transition: color 0.3s ease;
+}
+
+// Mixin for date styles
+@mixin groupDate($font-size, $padding: 0) {
+  font-size: $font-size;
+  font-family: $item-font-family;
+  padding-top: $padding;
+  letter-spacing: 0.5px;
+}
+
+// Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {
+
+  // Overview Page Styles
+  .infoCardoverviewPage {
+    @include infoCardPage(auto, auto, 0 5px);
+    .groupoverviewPage {
+      @include groupPage(5px);
+      .overviewImage { @include groupImage(30px, 30px, 0, 10px); }
+      .overviewName { @include groupName(14px, 5px, none)  }
+    }
+    .overviewSubImage { @include groupSubImage(0, 0, none); }
+    .overviewDesc { @include groupDescription(0, 0, 0, none); }
+  }
+
+  // Technologies Page Styles
+  .infoCardtechnologiesPage {
+    @include infoCardPage(auto, auto, 0 5px);
+    .grouptechnologiesPage {
+      @include groupPage(0);
+      .technologiesImage { @include groupImage(30px, 30px, 0, 10px); }
+      .technologiesName { @include groupName(14px, 5px, none);}
+    }
+    .technologiesSubImage { @include groupSubImage(0, 0, none); }
+    .technologiesDesc { @include groupDescription(0, 0, 0, none); }
+  }
+
+  // Projects Page Styles
+  .infoCardprojectsPage {
+    @include infoCardPage(auto, auto, 0);
+    .groupprojectsPage {
+      @include groupPage(0);
+      .projectsImage { @include groupImage(40px, 40px, 0, 10px 10px 0); }
+      .projectsName { @include groupName(14px, 10px 10px 10px, block); }
+    }
+    .projectsSubImage { @include groupSubImage(0, 0, none); }
+    .projectsDesc { @include groupDescription(12px, 10px 10px, 0, block); }
+    .projectsTechImage { @include groupTechImage(0, 0 10px 10px, block); }
+  }
+
+  // Career Page Styles
+  .infoCardcareerPage {
+    @include infoCardPage(auto, auto, 0 10px);
+    .groupcareerPage {
+      @include groupPage(20px);
+      .careerImage {
+        @include groupImage(60px, 60px, 0, 0);
+      }
+      .careerName { 
+        @include groupName(12px, 5px, block);
+        .careerDate { @include groupDate(10px, 0); }
+      }
+    }
+    .careerSubImage { @include groupSubImage(0, 0, none); }
+    .careerDesc { @include groupDescription(0, 0, 0, 'none'); }
+  }
+
+  // Footer Page Styles
+  .infoCardfooterPage {
+    @include infoCardPage(auto, auto, 0 10px);
+    .groupfooterPage {
+      @include groupPage(0);
+      .footerImage { @include groupImage(20px, 20px, 0, 5px); }
+      .footerName { @include groupName(0, 0, none); }
+    }
+    .footerSubImage { @include groupSubImage(0, 0, none); }
+    .footerDesc { @include groupDescription(0, 0, 0, 'none'); }
+  }
+
+}
+
+// Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {
+  
+  // Overview Page Styles
+  .infoCardoverviewPage {
+    @include infoCardPage(200px, auto, 0 10px);
+    .groupoverviewPage {
+      @include groupPage(5px);
+      .overviewImage { @include groupImage(50px, 50px, 0, 10px); }
+      .overviewName { @include groupName(14px, 5px, block)  }
+    }
+    .overviewSubImage { @include groupSubImage(0, 10px, block); }
+    .overviewDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+
+  // Technologies Page Styles
+  .infoCardtechnologiesPage {
+    @include infoCardPage(150px, auto, 0 10px);
+    .grouptechnologiesPage {
+      @include groupPage(0);
+      .technologiesImage { @include groupImage(30px, 30px, 0, 12px); }
+      .technologiesName { @include groupName(14px, 5px, block);}
+    }
+    .technologiesSubImage { @include groupSubImage(0, 10px, block); }
+    .technologiesDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+
+  // Projects Page Styles
+  .infoCardprojectsPage {
+    @include infoCardPage(200px, auto, 0);
+    .groupprojectsPage {
+      @include groupPage(0);
+      .projectsImage { @include groupImage(40px, 40px, 0, 10px 10px 0); }
+      .projectsName { @include groupName(14px, 10px 10px 10px, block); }
+    }
+    .projectsSubImage { @include groupSubImage(0, 0, block); }
+    .projectsDesc { @include groupDescription(14px, 10px 10px, 0, block); }
+    .projectsTechImage { @include groupTechImage(0, 0 10px 10px, block); }
+  }
+ 
+  // Career Page Styles
+  .infoCardcareerPage {
+    @include infoCardPage(200px, auto, 0 10px);
+    .groupcareerPage {
+      @include groupPage(20px);
+      .careerImage {
+        @include groupImage(60px, 60px, 0, 0);
+      }
+      .careerName { 
+        @include groupName(14px, 5px, block);
+        .careerDate { @include groupDate(10px, 0); }
+      }
+    }
+    .careerSubImage { @include groupSubImage(0, 10px, block); }
+    .careerDesc { @include groupDescription(14px, 10px, 10px 0, block); }
+  }
+
+  // Footer Page Styles
+  .infoCardfooterPage {
+    @include infoCardPage(auto, auto, 0 10px);
+    .groupfooterPage {
+      @include groupPage(0);
+      .footerImage { @include groupImage(20px, 20px, 0, 5px); }
+      .footerName { @include groupName(0, 0, none); }
+    }
+    .footerSubImage { @include groupSubImage(0, 10px, block); }
+    .footerDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+}
+
+// Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 700px) {
+  
+  // Overview Page Styles
+  .infoCardoverviewPage {
+    @include infoCardPage(200px, auto, 0 10px);
+    .groupoverviewPage {
+      @include groupPage(5px);
+      .overviewImage { @include groupImage(50px, 50px, 0, 10px); }
+      .overviewName { @include groupName(14px, 5px, block)  }
+    }
+    .overviewSubImage { @include groupSubImage(0, 10px, block); }
+    .overviewDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+
+  // Technologies Page Styles
+  .infoCardtechnologiesPage {
+    @include infoCardPage(150px, auto, 0 10px);
+    .grouptechnologiesPage {
+      @include groupPage(0);
+      .technologiesImage { @include groupImage(30px, 30px, 0, 12px); }
+      .technologiesName { @include groupName(14px, 5px, block);}
+    }
+    .technologiesSubImage { @include groupSubImage(0, 10px, block); }
+    .technologiesDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+
+  // Projects Page Styles
+  .infoCardprojectsPage {
+    @include infoCardPage(200px, auto, 0);
+    .groupprojectsPage {
+      @include groupPage(0);
+      .projectsImage { @include groupImage(40px, 40px, 0, 10px 10px 0); }
+      .projectsName { @include groupName(14px, 10px 10px 10px, block); }
+    }
+    .projectsSubImage { @include groupSubImage(0, 0, block); }
+    .projectsDesc { @include groupDescription(14px, 10px 10px, 0, block); }
+    .projectsTechImage { @include groupTechImage(0, 0 10px 10px, block); }
+  }
+ 
+  // Career Page Styles
+  .infoCardcareerPage {
+    @include infoCardPage(200px, auto, 0 10px);
+    .groupcareerPage {
+      @include groupPage(20px);
+      .careerImage {
+        @include groupImage(60px, 60px, 0, 0);
+      }
+      .careerName { 
+        @include groupName(14px, 5px, block);
+        .careerDate { @include groupDate(10px, 0); }
+      }
+    }
+    .careerSubImage { @include groupSubImage(0, 10px, block); }
+    .careerDesc { @include groupDescription(14px, 10px, 10px 0, block); }
+  }
+
+  // Footer Page Styles
+  .infoCardfooterPage {
+    @include infoCardPage(auto, auto, 0 10px);
+    .groupfooterPage {
+      @include groupPage(0);
+      .footerImage { @include groupImage(20px, 20px, 0, 5px); }
+      .footerName { @include groupName(0, 0, none); }
+    }
+    .footerSubImage { @include groupSubImage(0, 10px, block); }
+    .footerDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+}
+
+// Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {
+  
+  // Overview Page Styles
+  .infoCardoverviewPage {
+    @include infoCardPage(200px, auto, 0 10px);
+    .groupoverviewPage {
+      @include groupPage(5px);
+      .overviewImage { @include groupImage(50px, 50px, 0, 10px); }
+      .overviewName { @include groupName(14px, 5px, block)  }
+    }
+    .overviewSubImage { @include groupSubImage(0, 10px, block); }
+    .overviewDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+
+  // Technologies Page Styles
+  .infoCardtechnologiesPage {
+    @include infoCardPage(150px, auto, 0 10px);
+    .grouptechnologiesPage {
+      @include groupPage(0);
+      .technologiesImage { @include groupImage(30px, 30px, 0, 12px); }
+      .technologiesName { @include groupName(14px, 5px, block);}
+    }
+    .technologiesSubImage { @include groupSubImage(0, 10px, block); }
+    .technologiesDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+
+  // Projects Page Styles
+  .infoCardprojectsPage {
+    @include infoCardPage(200px, auto, 0);
+    .groupprojectsPage {
+      @include groupPage(0);
+      .projectsImage { @include groupImage(40px, 40px, 0, 10px 10px 0); }
+      .projectsName { @include groupName(14px, 10px 10px 10px, block); }
+    }
+    .projectsSubImage { @include groupSubImage(0, 0, block); }
+    .projectsDesc { @include groupDescription(14px, 10px 10px, 0, block); }
+    .projectsTechImage { @include groupTechImage(0, 0 10px 10px, block); }
+  }
+ 
+  // Career Page Styles
+  .infoCardcareerPage {
+    @include infoCardPage(200px, auto, 0 10px);
+    .groupcareerPage {
+      @include groupPage(20px);
+      .careerImage {
+        @include groupImage(60px, 60px, 0, 0);
+      }
+      .careerName { 
+        @include groupName(14px, 5px, block);
+        .careerDate { @include groupDate(10px, 0); }
+      }
+    }
+    .careerSubImage { @include groupSubImage(0, 10px, block); }
+    .careerDesc { @include groupDescription(14px, 10px, 10px 0, block); }
+  }
+
+  // Footer Page Styles
+  .infoCardfooterPage {
+    @include infoCardPage(auto, auto, 0 10px);
+    .groupfooterPage {
+      @include groupPage(0);
+      .footerImage { @include groupImage(20px, 20px, 0, 5px); }
+      .footerName { @include groupName(0, 0, none); }
+    }
+    .footerSubImage { @include groupSubImage(0, 10px, block); }
+    .footerDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media only screen and (min-width: 992px) {
+  
+  // Overview Page Styles
+  .infoCardoverviewPage {
+    @include infoCardPage(275px, auto, 0 10px);
+    .groupoverviewPage {
+      @include groupPage(5px);
+      .overviewImage { @include groupImage(50px, 50px, 0, 10px); }
+      .overviewName { @include groupName(14px, 5px, '')  }
+    }
+    .overviewSubImage { @include groupSubImage(0, 10px, block); }
+    .overviewDesc { @include groupDescription(14px, 10px, 10px 0, block); }
+  }
+
+  // Technologies Page Styles
+  .infoCardtechnologiesPage {
+    @include infoCardPage(158px, auto, 0 10px);
+    .grouptechnologiesPage {
+      @include groupPage(0);
+      .technologiesImage { @include groupImage(30px, 30px, 0, 12px); }
+      .technologiesName { @include groupName(14px, 5px, block);}
+    }
+    .technologiesSubImage { @include groupSubImage(0, 10px, block); }
+    .technologiesDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+
+  // Projects Page Styles
+  .infoCardprojectsPage {
+    @include infoCardPage(380px, auto, 0);
+    .groupprojectsPage {
+      @include groupPage(0);
+      .projectsImage { @include groupImage(40px, 40px, 0, 10px 10px 0); }
+      .projectsName { @include groupName(14px, 10px 10px 10px, ''); }
+    }
+    .projectsSubImage { @include groupSubImage(0, 0, block); }
+    .projectsDesc { @include groupDescription(14px, 10px 10px, 0, block); }
+    .projectsTechImage { @include groupTechImage(0, 0 10px 10px, block); }
+  }
+
+  // Career Page Styles
+  .infoCardcareerPage {
+    @include infoCardPage(275px, auto, 0 10px);
+    .groupcareerPage {
+      @include groupPage(20px);
+      .careerImage {
+        @include groupImage(60px, 60px, 0, 0);
+      }
+      .careerName { 
+        @include groupName(14px, 5px, block);
+        .careerDate { @include groupDate(10px, 0); }
+      }
+    }
+    .careerSubImage { @include groupSubImage(0, 10px, block); }
+    .careerDesc { @include groupDescription(13px, 10px 0, 0, block); }
+  }
+
+  // Footer Page Styles
+  .infoCardfooterPage {
+    @include infoCardPage(auto, auto, 0 10px);
+    .groupfooterPage {
+      @include groupPage(0);
+      .footerImage { @include groupImage(20px, 20px, 0, 5px); }
+      .footerName { @include groupName(0, 0, none); }
+    }
+    .footerSubImage { @include groupSubImage(0, 10px, block); }
+    .footerDesc { @include groupDescription(14px, 0 10px, 10px, block); }
+  }
+
+}

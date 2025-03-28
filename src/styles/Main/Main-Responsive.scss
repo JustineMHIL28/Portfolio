@@ -1,0 +1,142 @@
+$sections: (
+  "overview": ".overview",
+  "technologies": ".technologies",
+  "projects": ".projects",
+  "career": ".career",
+  "footer": ".footer"
+);
+
+$icon-size: 16px;
+$item-font-size: 14px;
+$item-font-family: 'Inter', sans-serif;
+
+// Mixin for module pages
+// Horizontal Layout Styles
+@mixin module-page-styles($text-font-size, $title-font-size, $description-font-size, $infocard-width, $profile-width, $profile-height) {
+
+  .main-page-background {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/profiles/1.jpg'); // Correct path to your image
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; // Ensures full coverage of the screen
+    position: relative;
+  
+    .main-flex {
+      padding: 0 18%;
+      gap: 2rem;
+      display: flex;
+      flex-direction: row; // Ensures horizontal alignment
+      align-items: center;
+      justify-content: space-between;
+
+      .main-text-1 {
+        font-size: $text-font-size;
+        font-family: $item-font-family;
+        font-weight: bold;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+      }
+
+      .main-text-2 {
+        font-size: $title-font-size;
+        font-family: $item-font-family;
+        font-weight: 300;
+        transition: all 0.3s ease;
+      }
+
+      .profile {
+        width: $profile-width;
+        height: $profile-height;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 8px rgba(160, 160, 160, 0.5);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  @each $key, $class in $sections {
+    #{$class}SubTitle {
+      display: flex;
+      font-size: $text-font-size;
+      font-family: $item-font-family;
+      margin-bottom: 10px;
+      transition: all 0.3s ease; /* Smooth transition */
+    }
+
+    #{$class}Title {
+      display: flex;
+      font-weight: bold;
+      font-size: $title-font-size;
+      font-family: $item-font-family;
+      margin-bottom: 20px;
+      transition: all 0.3s ease; /* Smooth transition */
+    }
+
+    #{$class}Description {
+      font-size: $description-font-size; /* Ayusin ayon sa iyong disenyo */
+      font-family: $item-font-family; /* Ayusin ayon sa iyong disenyo */
+      line-height: 22px;
+      width: 98%;
+      margin-bottom: 20px; /* Agwat sa ibaba ng description */
+      opacity: 0.8;
+      flex: 1;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease; /* Smooth transition */
+    }
+
+    #{$class}InfoCard {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      gap: 16px;
+      width: $infocard-width;
+      margin-bottom: 20px;
+      transition: all 0.3s ease; /* Smooth transition */
+    }
+  }
+}
+
+// Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {
+  .module-page {
+    .main-page { @include module-page-styles(20px, 12px, 12px, 100%, 100px, 100px) }
+    @each $key, $class in $sections {
+      #{$class}Page { @include module-page-styles(14px, 16px, 12px, 100%, '', '') }
+    }
+  }
+}
+
+// Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {
+  .module-page {
+    .main-page { @include module-page-styles(35px, 16px, 14px, 100%, 160px, 160px) }
+    @each $key, $class in $sections {
+      #{$class}Page { @include module-page-styles(16px, 18px, 14px, 100%, '', '') }
+    }
+  }
+}
+
+// Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {
+  .module-page {
+    .main-page { @include module-page-styles(45px, 18px, 14px, 100%, 180px, 180px) }
+    @each $key, $class in $sections {
+      #{$class}Page { @include module-page-styles(16px, 20px, 14px, 100%, '', '') }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media only screen and (min-width: 992px) {
+  .module-page {
+    .main-page { @include module-page-styles(55px, 20px, 14px, 100%, 200px, 200px) }
+    @each $key, $class in $sections {
+      #{$class}Page { @include module-page-styles(16px, 20px, 14px, 100%, '', '') }
+    }
+  }
+}
