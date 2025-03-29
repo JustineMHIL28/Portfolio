@@ -12,7 +12,7 @@ $item-font-family: 'Inter', sans-serif;
 
 // Mixin for module pages
 // Horizontal Layout Styles
-@mixin module-page-styles($text-font-size, $title-font-size, $description-font-size, $infocard-width, $profile-width, $profile-height) {
+@mixin module-page-styles($text-font-size, $title-font-size, $description-font-size, $description-width, $infocard-width, $profile-width, $profile-height) {
 
   .main-page-background {
     display: flex;
@@ -80,7 +80,7 @@ $item-font-family: 'Inter', sans-serif;
       font-size: $description-font-size; /* Ayusin ayon sa iyong disenyo */
       font-family: $item-font-family; /* Ayusin ayon sa iyong disenyo */
       line-height: 22px;
-      width: 98%;
+      width: $description-width;
       margin-bottom: 20px; /* Agwat sa ibaba ng description */
       opacity: 0.8;
       flex: 1;
@@ -104,9 +104,9 @@ $item-font-family: 'Inter', sans-serif;
 // Extra small devices (phones, 600px and down)
 @media only screen and (max-width: 600px) {
   .module-page {
-    .main-page { @include module-page-styles(20px, 12px, 12px, 100%, 100px, 100px) }
+    .main-page { @include module-page-styles(20px, 12px, 12px,'', 100%, 100px, 100px) }
     @each $key, $class in $sections {
-      #{$class}Page { @include module-page-styles(14px, 16px, 12px, 100%, '', '') }
+      #{$class}Page { @include module-page-styles(14px, 16px, 12px, 98%, 100%, '', '') }
     }
   }
 }
@@ -114,9 +114,9 @@ $item-font-family: 'Inter', sans-serif;
 // Small devices (portrait tablets and large phones, 600px and up)
 @media only screen and (min-width: 600px) {
   .module-page {
-    .main-page { @include module-page-styles(35px, 16px, 14px, 100%, 160px, 160px) }
+    .main-page { @include module-page-styles(35px, 16px, 14px, '', 100%, 160px, 160px) }
     @each $key, $class in $sections {
-      #{$class}Page { @include module-page-styles(16px, 18px, 14px, 100%, '', '') }
+      #{$class}Page { @include module-page-styles(16px, 18px, 14px, 90%, 100%, '', '') }
     }
   }
 }
@@ -124,9 +124,9 @@ $item-font-family: 'Inter', sans-serif;
 // Medium devices (landscape tablets, 768px and up)
 @media only screen and (min-width: 768px) {
   .module-page {
-    .main-page { @include module-page-styles(45px, 18px, 14px, 100%, 180px, 180px) }
+    .main-page { @include module-page-styles(45px, 18px, 14px, '', 100%, 180px, 180px) }
     @each $key, $class in $sections {
-      #{$class}Page { @include module-page-styles(16px, 20px, 14px, 100%, '', '') }
+      #{$class}Page { @include module-page-styles(16px, 20px, 14px, 80%, 100%, '', '') }
     }
   }
 }
@@ -134,9 +134,9 @@ $item-font-family: 'Inter', sans-serif;
 // Large devices (desktops, 992px and up)
 @media only screen and (min-width: 992px) {
   .module-page {
-    .main-page { @include module-page-styles(55px, 20px, 14px, 100%, 200px, 200px) }
+    .main-page { @include module-page-styles(55px, 20px, 14px, '', 100%, 200px, 200px) }
     @each $key, $class in $sections {
-      #{$class}Page { @include module-page-styles(16px, 20px, 14px, 100%, '', '') }
+      #{$class}Page { @include module-page-styles(16px, 20px, 14px, 65%, 100%, '', '') }
     }
   }
 }
