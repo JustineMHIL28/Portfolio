@@ -32,7 +32,7 @@ Here’s a quick rundown of my work experience as a web developer. This portfoli
 ## Assets Used
 
 ### Wallpaper
-The background wallpaper used in this project is from https://www.baltana.com/abstract/digital-art-hd-4k-wallpapers-41715.html
+The background wallpaper used in this project is from https://www.freepik.com/vectors/4k-wallpaper-dark
 
 ### Icons
 The icons used in this project are from [Flaticon](https://www.flaticon.com). Below are the specific icons and their authors:
