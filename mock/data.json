@@ -92,8 +92,22 @@
       "id": 10,
       "name": "Git",
       "image": "/assets/dev-icon/git.png",
-      "description": "Version control system for tracking changes in source code.",
+      "description": "",
       "link": "https://git-scm.com/"
+    },
+    {
+      "id": 11,
+      "name": "Laravel",
+      "image": "/assets/dev-icon/laravel.png",
+      "description": "",
+      "link": "https://laravel.com/"
+    },
+    {
+      "id": 12,
+      "name": "Shadcn",
+      "image": "/assets/dev-icon/shadcn.png",
+      "description": "",
+      "link": "https://ui.shadcn.com/docs/components"
     }
   ],
 
@@ -102,7 +116,7 @@
       "id": 1,
       "name": "My Portfolio",
       "image": "/assets/project-icon/soon.png",
-      "subimage": "/assets/project-icon/my-portfolio/video.mp4",
+      "subimage": "/assets/project-icon/my-portfolio/my-portfolio.webm",
       "techimage": [
         "/assets/dev-icon/html5.png",
         "/assets/dev-icon/css.png",
@@ -113,10 +127,9 @@
       "link": "https://example.com/portfolio",
       "description": "My portfolio demonstrates my expertise in web development through a collection of projects. It highlights my skills in technologies such as HTML, SCSS, JavaScript (JS), React and Ant-design showcasing a variety of responsive and dynamic web applications."
     },
-
     {
-      "id": 1,
-      "name": "Modern Web Application with React, Node.js & SQL",
+      "id": 2,
+      "name": "Modern Human Resource Information System (HRIS) using React",
       "image": "/assets/project-icon/soon.png",
       "subimage": "/assets/project-icon/react-ui-proj/video.mp4",
       "techimage": [
@@ -130,6 +143,23 @@
       ],
       "link": "https://example.com/portfolio",
       "description": "This is a responsive and high-performance web application built using React.js for the front end, Node.js for the back end, and SQL for database management. The UI is designed with Ant Design and SCSS, ensuring a modern and user-friendly experience."
+    },
+    {
+      "id": 3,
+      "name": "ACCAS Contract Management, Monitoring and Reporting System",
+      "image": "/assets/project-icon/soon.png",
+      "subimage": "/assets/project-icon/accas/bangalow.webm",
+      "techimage": [
+        "/assets/dev-icon/html5.png",
+        "/assets/dev-icon/css.png",
+        "/assets/dev-icon/react-js.png",
+        "/assets/dev-icon/ts.png",
+        "/assets/dev-icon/shadcn.png",
+        "/assets/dev-icon/laravel.png",
+        "/assets/dev-icon/mysql.png"
+      ],
+      "link": "https://example.com/portfolio",
+      "description": "The ACCAS system was proudly developed by the ABLE Team. It is a responsive and high-performance web application designed to streamline the entire lifecycle of contract creation, management, monitoring, and reporting. The system uses React for a dynamic front end and Laravel for a robust back end, with MySQL ensuring reliable and secure data storage. The user interface is built with Shadcn UI, providing a clean, modern, and intuitive experience — making it easy to use for both technical and non-technical users alike."
     }
   ],
 
@@ -139,7 +169,7 @@
       "name": "Software Engineer",
       "duration": "Nov 2021 - Jan 2023",
       "image": "/assets/company-icon/gp-next-solution-inc.png",
-      "link": "https://web.facebook.com/gpnext2020/?_rdc=1&_rdr",
+      "link": "https://www.linkedin.com/company/gp-next-inc/posts/?feedView=all",
       "description": "Designed, developed, and maintained web applications, ensuring efficient, reusable, and reliable code. Collaborated with cross-functional teams in various aspects of development, including front-end, back-end, and database design."
     },
     {
@@ -147,8 +177,16 @@
       "name": "Junior Programmer",
       "duration": "June 2023 - Dec 2023",
       "image": "/assets/company-icon/lloyd-laboratoties-inc.jpeg",
-      "link": "https://lloydlab.com/",
-      "description": "Managed several software projects, ensuring on-time delivery and quality output while mentoring junior developers."
+      "link": "https://www.linkedin.com/company/lloyd-laboratories-inc/posts/?feedView=all",
+      "description": "Managed multiple software projects, ensuring on-time delivery and high-quality output while mentoring team members. Also developed and maintained an inventory management system."
+    },
+    {
+      "id": 3,
+      "name": "Junior Programmer",
+      "duration": "April 2025 - Current Job",
+      "image": "/assets/company-icon/bangalow.jpg",
+      "link": "https://www.linkedin.com/company/bangalow/posts/?feedView=all",
+      "description": "Collaborated with a capable team to build user-friendly systems, successfully turning project ideas into functional applications."
     }
   ],
 
@@ -180,6 +218,13 @@
       "image": "/assets/social-icon/indeed.webp",
       "link": "https://profile.indeed.com/p/justineh-4y483th",
       "description": "Check out my profile on Indeed."
+    },
+    {
+      "id": 6,
+      "name": "Linkin",
+      "image": "/assets/social-icon/linkin.png",
+      "link": "https://profile.indeed.com/p/justineh-4y483th",
+      "description": "Check out my profile on Linkin."
     }
   ]
 }
