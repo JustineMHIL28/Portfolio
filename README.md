@@ -56,4 +56,4 @@ To run this project locally, follow these steps:
 The project should now be running on http://localhost:3000/.
 
 ## Conclusion
-Thank you for visiting my portfolio! If you'd like to connect or discuss potential collaborations, feel free to reach out via email at justinem.hil@gmail.com.
+Thank you for visiting my portfolio! If you'd like to connect or discuss potential collaborations, feel free to reach out via email at justinemhilario@gmail.com.

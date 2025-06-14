@@ -10,7 +10,7 @@ export const ARRAY = {
             content: (
                 <>
                     <p>
-                        I’m Justine M. Hilario, a 28 yrs old Web Developer with a passion for technology. I specialize in building efficient and reliable web applications, using various technologies such as HTML, CSS, JavaScript and ReactJS to create dynamic and user-friendly experiences.
+                        I’m Justine M. Hilario, a 28 yrs old Web Developer with a passion for technology. I specialize in building efficient and reliable web applications, using various technologies such as HTML, CSS, JavaScript and React to create dynamic and user-friendly experiences.
                     </p>
                     <p style={{ marginTop: '8px' }}>
                         thrive on continuous learning and enjoy collaborating with others to deliver high-quality projects. When I'm not coding, I explore new tech trends and share insights with fellow developers.
