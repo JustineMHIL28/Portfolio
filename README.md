@@ -1,7 +1,7 @@
 # Project Title: My Portfolio Website
 
 ## About
-I’m Justine M. Hilario, a 27-year-old Web Developer with a passion for technology. I specialize in building efficient and reliable web applications, using various technologies such as **HTML**, **CSS**, **JavaScript (JS)**, and **React** to create dynamic and user-friendly experiences.
+I'm Justine M. Hilario, Web Developer with hands-on experience in building and maintaining web applications. Focused on writing clean, efficient code and continuously learning new technologies. Experienced in working with teams to deliver reliable internal and external systems.
 
 ## Technologies Used
 
