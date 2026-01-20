@@ -1,75 +1,110 @@
 // Developer: Justine M. Hilario
 
-import '../styles/InfoCard/InfoCard-Responsive.scss'; // Importing SCSS styles for the InfoCard component
-import React from 'react'; // Importing React library
-import { Image } from 'antd'; // Importing Image component from Ant Design
+import '../styles/InfoCard/InfoCard-Responsive.scss';
+import React from 'react';
+import { Image } from 'antd';
 
 // Function to render an image with an optional link and tooltip
 const renderImage = (type, image, link, disableDataLink, name, disableDataTooltips) => (
   disableDataLink ? (
     <>
-      {/* Render image without link */}
       <Image className={`${type}Image`} src={`${process.env.PUBLIC_URL}/${image}`} preview={false} />
-      {!disableDataTooltips && <div className="tooltip">{name}</div>} {/* Render tooltip if not disabled */}
+      {!disableDataTooltips && <div className="tooltip">{name}</div>}
     </>
   ) : (
-    <a href={link}> {/* Render image with link */}
+    <a href={link}>
       <Image className={`${type}Image`} src={`${process.env.PUBLIC_URL}/${image}`} preview={false} />
-      {!disableDataTooltips && <div className="tooltip">{name}</div>} {/* Render tooltip if not disabled */}
+      {!disableDataTooltips && <div className="tooltip">{name}</div>}
     </a>
   )
 );
 
-const renderVideo = (type, video, link, disableDataLink, name, disableDataTooltips) => (
-  disableDataLink ? (
-    <>
-      {/* Render image without link */}
-      <div className="video-container">
-        <video autoPlay controls>
-          <source src={`${process.env.PUBLIC_URL}/${video}`} type="video/mp4" />
-        </video>
+// Function to render sub-images with preview/enlarge capability
+const renderSubImages = (type, subimages, name, disableDataTooltips) => {
+  if (Array.isArray(subimages) && subimages.length > 0) {
+    return (
+      <div className="image-gallery-container">
+        <Image.PreviewGroup>
+          <Image
+            className={`${type}SubImage`}
+            src={`${process.env.PUBLIC_URL}/${subimages[0]}`}
+            preview={{
+              mask: (
+                <div className="preview-mask">
+                  <span className="preview-text">Click to view gallery</span>
+                  <span className="image-count">{subimages.length} images</span>
+                </div>
+              )
+            }}
+            style={{ 
+              width: '100%',
+              height: 'auto',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+            }}
+          />
+          {subimages.slice(1).map((subimage, index) => (
+            <Image
+              key={index + 1}
+              src={`${process.env.PUBLIC_URL}/${subimage}`}
+              style={{ display: 'none' }}
+            />
+          ))}
+        </Image.PreviewGroup>
+        {!disableDataTooltips && <div className="tooltip">{name}</div>}
       </div>
-      {!disableDataTooltips && <div className="tooltip">{name}</div>} {/* Render tooltip if not disabled */}
-    </>
-  ) : (
-    <a href={link}> {/* Render image with link */}
-      <div className="video-container">
-        <video autoPlay controls>
-          <source src={`${process.env.PUBLIC_URL}/${video}`} type="video/mp4" />
-        </video>
-      </div>
-      {!disableDataTooltips && <div className="tooltip">{name}</div>} {/* Render tooltip if not disabled */}
-    </a>
-  )
-);
+    );
+  }
+  
+  if (typeof subimages === 'string') {
+    return (
+      <>
+        <Image 
+          className={`${type}SubImage`} 
+          src={`${process.env.PUBLIC_URL}/${subimages}`} 
+          preview={true}
+          style={{ 
+            width: '100%',
+            height: 'auto',
+            borderRadius: '5px',
+            cursor: 'pointer'
+          }}
+        />
+        {!disableDataTooltips && <div className="tooltip">{name}</div>}
+      </>
+    );
+  }
+  
+  return null;
+};
 
 // Function to render the card with various details
 const renderCard = (
   { style, theme, type, disableDataImage, disableDataSubImage, disableDataTechImage, disableDataDescription, disableDataLink, disableDataTooltips },
   { name, description, image, subimage, techimage, duration, link }
 ) => {
-  console.log("Rendering card:", { name, duration, description }); // Log the details being rendered for debugging
-
   return (
     <div style={style} className={`infoCard${type}Page ${theme}`}>
       <div className={`group${type}Page`}>
-        {/* Render the main image */}
         {!disableDataImage && renderImage(type, image, link, disableDataLink, name, disableDataTooltips)}
         <div className={`${type}Name`}>
           {name} 
-          {duration && <div className={`${type}Date`}>{duration}</div>} {/* Render duration if available */}
+          {duration && <div className={`${type}Date`}>{duration}</div>}
         </div>
       </div>
-      {/* Render subimage if not disabled */}
-      {!disableDataSubImage && renderVideo(type, subimage, link, disableDataLink, name, disableDataTooltips)}
-      {/* Render description if not disabled */}
+      {!disableDataSubImage && subimage && renderSubImages(type, subimage, name, disableDataTooltips)}
       {!disableDataDescription && <div className={`${type}Desc`}>{description}</div>}
-      {/* Render tech images if not disabled */}
-      {!disableDataTechImage && techimage.map((techImage, index) => (
-        <Image key={index} className={`${type}TechImage`} src={`${process.env.PUBLIC_URL}/${techImage}`} preview={false} />
-      ))}
+      {/* TECH ICONS IN CONTAINER */}
+      {!disableDataTechImage && techimage && (
+        <div className="tech-icons-container">
+          {techimage.map((techImage, index) => (
+            <Image key={index} className={`${type}TechImage`} src={`${process.env.PUBLIC_URL}/${techImage}`} preview={false} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
-export const INFOCARD = { main: renderCard }; // Exporting the renderCard function as INFOCARD
+export const INFOCARD = { main: renderCard };

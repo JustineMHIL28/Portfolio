@@ -2,6 +2,9 @@
 
 import '../styles/Main/Main-Responsive.scss';
 import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { INFOCARD } from "../components/InfoCard.jsx";
 import { STRING } from "../constants/string.js";
 
@@ -19,6 +22,44 @@ export const FETCH = {
       disableDataLink, disableDataTooltips
     };
 
+  // Carousel settings for projects section - ISA LANG NAKIKITA!
+  const carouselSettings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1, // ISA LANG! 
+    slidesToScroll: 1,
+    arrows: true,
+    swipeToSlide: true,
+    adaptiveHeight: true,
+    centerMode: false,
+    centerPadding: '0px',
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        }
+      }
+    ]
+  };
+
     // Function to render InfoCards
     const renderCards = () => {
       const cardFunction = INFOCARD['main']; // Get render function from INFOCARD
@@ -29,11 +70,28 @@ export const FETCH = {
         return null; // Exit if function is not valid
       }
 
-      // Render cards based on data array
+      // Check if this is the projects section - use carousel
+      if (type === 'projects' && data.length > 0) {
+        return (
+          <div className={`carousel-wrapper ${theme}`}>
+            <Slider {...carouselSettings}>
+              {data.map(item => (
+                <div key={item.id} className="carousel-slide">
+                  {Array.isArray(item) 
+                    ? cardFunction(infoCardProps, ...item)
+                    : cardFunction(infoCardProps, item)}
+                </div>
+              ))}
+            </Slider>
+          </div>
+        );
+      }
+
+      // Render regular grid for other sections
       return data.map(item => (
         <div key={item.id}>
           {Array.isArray(item) 
-            ? cardFunction(infoCardProps, ...item) // Spread item if it's an array
+            ? cardFunction(infoCardProps, ...item)
             : cardFunction(infoCardProps, item)} 
         </div>
       ));

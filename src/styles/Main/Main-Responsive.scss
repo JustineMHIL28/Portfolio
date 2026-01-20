@@ -18,17 +18,17 @@ $item-font-family: 'Inter', sans-serif;
     display: flex;
     height: 100vh;
     width: 100%;
-    background-image: url('/profiles/1.jpg'); // Correct path to your image
+    background-image: url('/profiles/1.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; // Ensures full coverage of the screen
+    background-size: cover;
     position: relative;
   
     .main-flex {
       padding: 0 18%;
       gap: 2rem;
       display: flex;
-      flex-direction: row; // Ensures horizontal alignment
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
 
@@ -64,7 +64,7 @@ $item-font-family: 'Inter', sans-serif;
       font-size: $text-font-size;
       font-family: $item-font-family;
       margin-bottom: 10px;
-      transition: all 0.3s ease; /* Smooth transition */
+      transition: all 0.3s ease;
     }
 
     #{$class}Title {
@@ -73,20 +73,20 @@ $item-font-family: 'Inter', sans-serif;
       font-size: $title-font-size;
       font-family: $item-font-family;
       margin-bottom: 20px;
-      transition: all 0.3s ease; /* Smooth transition */
+      transition: all 0.3s ease;
     }
 
     #{$class}Description {
-      font-size: $description-font-size; /* Ayusin ayon sa iyong disenyo */
-      font-family: $item-font-family; /* Ayusin ayon sa iyong disenyo */
+      font-size: $description-font-size;
+      font-family: $item-font-family;
       line-height: 22px;
       width: $description-width;
-      margin-bottom: 20px; /* Agwat sa ibaba ng description */
+      margin-bottom: 20px;
       opacity: 0.8;
       flex: 1;
       line-height: 1.5;
       letter-spacing: 0.5px;
-      transition: all 0.3s ease; /* Smooth transition */
+      transition: all 0.3s ease;
     }
 
     #{$class}InfoCard {
@@ -96,7 +96,7 @@ $item-font-family: 'Inter', sans-serif;
       gap: 16px;
       width: $infocard-width;
       margin-bottom: 20px;
-      transition: all 0.3s ease; /* Smooth transition */
+      transition: all 0.3s ease;
     }
   }
 }
