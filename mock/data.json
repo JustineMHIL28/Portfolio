@@ -1,4 +1,3 @@
-
 {
   "overviewData": [
     {
@@ -92,63 +91,56 @@
       "id": 10,
       "name": "Git",
       "image": "/assets/dev-icon/git.png",
-      "description": "",
+      "description": "Version control system for tracking code changes.",
       "link": "https://git-scm.com/"
     },
     {
       "id": 11,
       "name": "Laravel",
       "image": "/assets/dev-icon/laravel.png",
-      "description": "",
+      "description": "PHP framework for building robust web applications.",
       "link": "https://laravel.com/"
     },
     {
       "id": 12,
       "name": "Shadcn",
       "image": "/assets/dev-icon/shadcn.png",
-      "description": "",
+      "description": "Modern UI component library built with Tailwind CSS.",
       "link": "https://ui.shadcn.com/docs/components"
     }
   ],
 
-  "projectsData": [
+"projectsData": [
     {
       "id": 1,
-      "name": "My Portfolio",
+      "name": "ACCAS - Contract Management, Monitoring and Reporting System",
       "image": "/assets/project-icon/soon.png",
-      "subimage": "/assets/project-icon/my-portfolio/my-portfolio.webm",
-      "techimage": [
-        "/assets/dev-icon/html5.png",
-        "/assets/dev-icon/css.png",
-        "/assets/dev-icon/react-js.png",
-        "/assets/dev-icon/js.png",
-        "/assets/dev-icon/ant-design.png"
+      "subimage": [
+        "/assets/project-icon/accas/accas-main-page.png",
+        "/assets/project-icon/accas/accas-login-page.png",
+        "/assets/project-icon/accas/accas-dashboard-page.png",
+        "/assets/project-icon/accas/accas-branch-page.png",
+        "/assets/project-icon/accas/accas-branch-add-page.png",
+        "/assets/project-icon/accas/accas-branch-edit-page.png",
+        "/assets/project-icon/accas/accas-copier-models-page.png",
+        "/assets/project-icon/accas/accas-copier-models-add-page.png",
+        "/assets/project-icon/accas/accas-copier-models-edit-page.png",
+        "/assets/project-icon/accas/accas-customers-page.png",
+        "/assets/project-icon/accas/accas-customers-add-page.png",
+        "/assets/project-icon/accas/accas-customers-edit-page.png",
+        "/assets/project-icon/accas/accas-equipment-page.png",
+        "/assets/project-icon/accas/accas-equipment-add-page.png",
+        "/assets/project-icon/accas/accas-equipment-edit-page.png",
+        "/assets/project-icon/accas/accas-work-order-page.png",
+        "/assets/project-icon/accas/accas-work-order-add-page.png",
+        "/assets/project-icon/accas/accas-work-order-edit-page.png",
+        "/assets/project-icon/accas/accas-user-management-page.png",
+        "/assets/project-icon/accas/accas-user-management-add-page.png",
+        "/assets/project-icon/accas/accas-user-management-edit-page.png",
+        "/assets/project-icon/accas/accas-user-management-permissions-page.png",
+        "/assets/project-icon/accas/accas-user-management-logs-users-page.png",
+        "/assets/project-icon/accas/accas-report-meter-count-page.png"
       ],
-      "link": "https://example.com/portfolio",
-      "description": "My portfolio demonstrates my expertise in web development through a collection of projects. It highlights my skills in technologies such as HTML, SCSS, JavaScript (JS), React and Ant-design showcasing a variety of responsive and dynamic web applications."
-    },
-    {
-      "id": 2,
-      "name": "Modern Human Resource Information System (HRIS) using React",
-      "image": "/assets/project-icon/soon.png",
-      "subimage": "/assets/project-icon/react-ui-proj/video.mp4",
-      "techimage": [
-        "/assets/dev-icon/html5.png",
-        "/assets/dev-icon/css.png",
-        "/assets/dev-icon/react-js.png",
-        "/assets/dev-icon/js.png",
-        "/assets/dev-icon/ant-design.png",
-        "/assets/dev-icon/node-js.png",
-        "/assets/dev-icon/mssql.png"
-      ],
-      "link": "https://example.com/portfolio",
-      "description": "This is a responsive and high-performance web application built using React.js for the front end, Node.js for the back end, and SQL for database management. The UI is designed with Ant Design and SCSS, ensuring a modern and user-friendly experience."
-    },
-    {
-      "id": 3,
-      "name": "ACCAS Contract Management, Monitoring and Reporting System",
-      "image": "/assets/project-icon/soon.png",
-      "subimage": "/assets/project-icon/accas/bangalow.webm",
       "techimage": [
         "/assets/dev-icon/html5.png",
         "/assets/dev-icon/css.png",
@@ -160,33 +152,119 @@
       ],
       "link": "https://example.com/portfolio",
       "description": "The ACCAS system was proudly developed by the ABLE Team. It is a responsive and high-performance web application designed to streamline the entire lifecycle of contract creation, management, monitoring, and reporting. The system uses React for a dynamic front end and Laravel for a robust back end, with MySQL ensuring reliable and secure data storage. The user interface is built with Shadcn UI, providing a clean, modern, and intuitive experience — making it easy to use for both technical and non-technical users alike."
+    },
+    {
+      "id": 2,
+      "name": "ISLP - Internal Software License Portal",
+      "image": "/assets/project-icon/soon.png",
+      "subimage": [
+        "/assets/project-icon/islp/welcomePage.png",
+        "/assets/project-icon/islp/login.png",
+        "/assets/project-icon/islp/forgot.png",
+        "/assets/project-icon/islp/dashboard.png",
+        "/assets/project-icon/islp/branch.png",
+        "/assets/project-icon/islp/branchCreate.png",
+        "/assets/project-icon/islp/branchUpdate.png",
+        "/assets/project-icon/islp/brandList.png",
+        "/assets/project-icon/islp/categoryList.png",
+        "/assets/project-icon/islp/customerList.png",
+        "/assets/project-icon/islp/expiryNotifRules.png",
+        "/assets/project-icon/islp/expiryNotifRulesCreate.png",
+        "/assets/project-icon/islp/expiryNotifRulesUpdate.png",
+        "/assets/project-icon/islp/expiryTracker.png",
+        "/assets/project-icon/islp/licensesList.png",
+        "/assets/project-icon/islp/licensesListCreate.png",
+        "/assets/project-icon/islp/licensesUsageReport.png",
+        "/assets/project-icon/islp/productList.png",
+        "/assets/project-icon/islp/productListCreate.png",
+        "/assets/project-icon/islp/productListUpdate.png",
+        "/assets/project-icon/islp/requestForm.png",
+        "/assets/project-icon/islp/requestFormCreate.png",
+        "/assets/project-icon/islp/approve-reject-request.png",
+        "/assets/project-icon/islp/softwareProductInvoice.png",
+        "/assets/project-icon/islp/typeManagementList.png",
+        "/assets/project-icon/islp/vendorList.png"
+      ],
+      "techimage": [
+        "/assets/dev-icon/html5.png",
+        "/assets/dev-icon/css.png",
+        "/assets/dev-icon/react-js.png",
+        "/assets/dev-icon/ts.png",
+        "/assets/dev-icon/shadcn.png",
+        "/assets/dev-icon/laravel.png",
+        "/assets/dev-icon/mysql.png"
+      ],
+      "link": "https://example.com/islp",
+      "description": "The ISLP (Internal Software License Portal) is a comprehensive web application designed to manage and track software licenses efficiently. It features a complete license lifecycle management system including request approval workflows, expiry tracking with automated notifications, vendor and product management, and detailed usage reporting. Built with React and TypeScript for a robust front end, Laravel for the backend, and MySQL for reliable data storage, the portal provides an intuitive interface using Shadcn UI components for seamless user experience across all management tasks."
+    },
+    {
+      "id": 3,
+      "name": "AMS - Assets Management System",
+      "subtitle": "Internal & External",
+      "image": "/assets/project-icon/soon.png",
+      "subimage": [
+        "/assets/project-icon/ams/ams-login-page.png",
+        "/assets/project-icon/ams/ams-dashboard-page.png",
+        "/assets/project-icon/ams/ams-backup-page.png",
+        "/assets/project-icon/ams/ams-import-page.png",
+        "/assets/project-icon/ams/ams-requestable-item-page.png",
+        "/assets/project-icon/ams/ams-settings-page.png",
+        "/assets/project-icon/ams/ams-status-label-page.png",
+        "/assets/project-icon/ams/ams-subscription-page.png"
+      ],
+      "techimage": [
+        "/assets/dev-icon/html5.png",
+        "/assets/dev-icon/css.png",
+        "/assets/dev-icon/react-js.png",
+        "/assets/dev-icon/ts.png",
+        "/assets/dev-icon/shadcn.png",
+        "/assets/dev-icon/laravel.png",
+        "/assets/dev-icon/mysql.png"
+      ],
+      "link": "https://example.com/ams",
+      "description": "The AMS (Assets Management System) is a comprehensive asset tracking and management platform designed for both internal and external users. It provides complete asset lifecycle management including backup functionality, data import/export capabilities, requestable items management, and detailed status tracking. The system offers an intuitive dashboard for monitoring asset inventory, configurable settings for customization, and comprehensive labeling for easy asset identification. Built with React and TypeScript for a responsive front-end experience, Laravel for reliable backend operations, and MySQL for secure data storage, AMS delivers a seamless asset management experience with Shadcn UI components ensuring a modern and professional interface."
     }
   ],
 
   "careerData": [
     {
       "id": 1,
-      "name": "Software Engineer",
-      "duration": "Nov 2021 - Jan 2023",
+      "position": "Software Engineer",
+      "company": "GP Next Solution, Inc.",
+      "location": "Quezon City",
+      "duration": "November 2021 - January 2023",
+      "period": "1 year & 2 months",
       "image": "/assets/company-icon/gp-next-solution-inc.png",
       "link": "https://www.linkedin.com/company/gp-next-inc/posts/?feedView=all",
-      "description": "Designed, developed, and maintained web applications, ensuring efficient, reusable, and reliable code. Collaborated with cross-functional teams in various aspects of development, including front-end, back-end, and database design."
+      "description": "Designed, developed, and maintained web applications for external clients. Built reusable and efficient front-end and back-end components while collaborating with cross-functional teams on UI, backend logic, and database design.",
+      "systemUsage": "External",
+      "techStack": ["HTML", "CSS", "React JS", "Node.js", "MySQL", "RESTful APIs", "Git"]
     },
     {
       "id": 2,
-      "name": "Junior Programmer",
-      "duration": "June 2023 - Dec 2023",
+      "position": "Junior Programmer",
+      "company": "Lloyd Laboratories, Inc.",
+      "location": "Malolos City, Bulacan",
+      "duration": "June 2023 - December 2023",
+      "period": "6 months",
       "image": "/assets/company-icon/lloyd-laboratoties-inc.jpeg",
       "link": "https://www.linkedin.com/company/lloyd-laboratories-inc/posts/?feedView=all",
-      "description": "Managed multiple software projects, ensuring on-time delivery and high-quality output while mentoring team members. Also developed and maintained an inventory management system."
+      "description": "Contributed to the development and maintenance of internal web applications. Enhanced system features, resolved technical issues efficiently, and worked closely with the development team to meet project milestones.",
+      "systemUsage": "Internal",
+      "techStack": ["HTML", "CSS", "Ant Design", "React JS", "Node.js", "MS SQL", "RESTful APIs", "GitHub"]
     },
     {
       "id": 3,
-      "name": "Junior Programmer",
-      "duration": "April 2025 - Current Job",
+      "position": "Junior Developer",
+      "company": "Bangalow Pty. Ltd. Co.",
+      "location": "Papua New Guinea / Marand Family Resort – Bauang, La Union",
+      "duration": "April 2025 - January 2026",
+      "period": "9 months",
       "image": "/assets/company-icon/bangalow.jpg",
       "link": "https://www.linkedin.com/company/bangalow/posts/?feedView=all",
-      "description": "Collaborated with a capable team to build user-friendly systems, successfully turning project ideas into functional applications."
+      "description": "Developed and maintained internal and client-facing web applications. Implemented new features while fixing bugs and optimizing system performance. Collaborated with senior developers to deliver projects on time and participated in code reviews.",
+      "systemUsage": "Internal & External",
+      "techStack": ["HTML", "CSS", "React JS", "Laravel", "PHP", "ShadCN UI", "MS SQL", "MySQL", "RESTful APIs", "GitHub"]
     }
   ],
 
@@ -221,10 +299,10 @@
     },
     {
       "id": 6,
-      "name": "Linkin",
+      "name": "LinkedIn",
       "image": "/assets/social-icon/linkin.png",
-      "link": "https://profile.indeed.com/p/justineh-4y483th",
-      "description": "Check out my profile on Linkin."
+      "link": "https://www.linkedin.com/in/justine-hilario",
+      "description": "Check out my profile on LinkedIn."
     }
   ]
 }
