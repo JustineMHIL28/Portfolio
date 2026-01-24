@@ -41,10 +41,12 @@ export const Navbar = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = window.location.origin + '/resume.docx';
+    // Use process.env.PUBLIC_URL - automatic to sa React based sa package.json homepage
+    link.href = `${process.env.PUBLIC_URL}/resume.docx`;
     link.download = 'Justine_Hilario_Resume.docx';
-    link.target = '_blank';
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   const handleOpenChat = () => {
