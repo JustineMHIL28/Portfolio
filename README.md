@@ -1,59 +1,169 @@
-# Project Title: My Portfolio Website
+# 🚀 Justine M. Hilario - Portfolio (Create React App)
 
-## About
-I'm Justine M. Hilario, Web Developer with hands-on experience in building and maintaining web applications. Focused on writing clean, efficient code and continuously learning new technologies. Experienced in working with teams to deliver reliable internal and external systems.
+Modern, responsive portfolio built with **Create React App**, TypeScript, and shadcn/ui.
 
-## Technologies Used
+## ✨ New Features Added!
 
-- **HTML**: 
-  - The foundation of my portfolio, providing a clear structure for the content and ensuring a logical flow of information.
+- 🌓 **Dark/Light Mode Toggle** - Switch themes
+- 💬 **Chatbot Widget** - Interactive chat interface
+- 📄 **Resume Download Button** - One-click download
+- 📏 **Better Spacing** - Improved readability
+- 🎨 **Rounded Corners** - More modern look
 
-- **SCSS**: 
-  - Employed for styling the website, SCSS enhances the design with responsive layouts and maintainable styles through the use of variables and nested rules.
+## 🎯 This Version Uses:
 
-- **JavaScript (JS)**: 
-  - Adds interactivity to the portfolio, enabling dynamic content and enhancing user experience through features like image sliders and smooth transitions.
+- ✅ **Create React App** (NOT Vite)
+- ✅ **TypeScript**
+- ✅ **Tailwind CSS**
+- ✅ **shadcn/ui**
+- ✅ **Framer Motion**
+- ✅ **Lucide React**
 
-- **React**: 
-  - Utilized to build the user interface, allowing for the creation of reusable components and effective state management, which results in a responsive and seamless experience for visitors.
+## 🚀 Quick Start
 
-## Projects
+```bash
+# Install dependencies
+npm install
 
-- **Portfolio Website**: A dynamic and responsive portfolio showcasing my web development skills. Built with ReactJS, the website features a modular design with interactive elements, reflecting my professional capabilities.
+# Start development server
+npm start
+```
 
-## Work Experience
-Here’s a quick rundown of my work experience as a web developer. This portfolio highlights several projects I've worked on and the skills I've developed over time.
+Open http://localhost:3000
 
-## Features
-- Responsive design for optimal viewing on various devices.
-- Interactive elements to engage users and enhance navigation.
-- Organized presentation of projects with images, descriptions, and links.
+## 📦 Setup Resume Download
 
-## Assets Used
+1. Add your resume PDF to `public/` folder
+2. Name it `resume.pdf`
+3. The download button will work automatically!
 
-### Wallpaper
-The background wallpaper used in this project is from https://www.freepik.com/vectors/4k-wallpaper-dark
+## 💬 Setup Real-Time Chat (Tawk.to)
 
-### Icons
-The icons used in this project are from [Flaticon](https://www.flaticon.com). Below are the specific icons and their authors:
-- [Font-end Icon](https://www.flaticon.com/free-icon/web-programming_1336979) by [Freepik](https://www.freepik.com)
-- [Back-end Icon](https://www.flaticon.com/free-icon/web-programming_1336989) by [Freepik](https://www.freepik.com)
-- [APIs Icon](https://www.flaticon.com/free-icon/cable_5885575) by [Freepik](https://www.freepik.com)
+**FREE live chat widget!** Read `TAWK-SETUP.md` for complete guide.
 
-## Getting Started
-To run this project locally, follow these steps:
+Quick Setup:
+1. Create account at https://www.tawk.to/
+2. Add your property
+3. Get Property ID & Widget ID
+4. Update `src/components/Navbar.tsx` line 35 with your IDs
+5. Done! Real-time chat ready!
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/JustineMHIL28/Portfolio.git
+See `TAWK-SETUP.md` for detailed instructions.
 
-2. **Navigate into the project directory**: cd Portfolio
+## 🎨 Features
 
-3. **Install dependencies**: npm install
+### 1. Navbar
+- Logo on left
+- Dark mode toggle
+- Resume download button
+- Chatbot trigger button
+- Sticky on scroll with blur effect
 
-4. **Start the development server**: npm start
+### 2. Dark/Light Mode
+- Smooth transition
+- Remembers preference
+- Toggle from navbar
 
-The project should now be running on http://localhost:3000/.
+### 3. Chatbot Widget
+- **Tawk.to** integration (FREE!)
+- Real-time messaging
+- Mobile app support
+- Email notifications
+- Setup guide included
 
-## Conclusion
-Thank you for visiting my portfolio! If you'd like to connect or discuss potential collaborations, feel free to reach out via email at justinemhilario@gmail.com.
+See `TAWK-SETUP.md` for setup!
+
+### 4. Better Design
+- Larger spacing (8 gap instead of 6)
+- More rounded corners (rounded-2xl)
+- Bigger text in cards
+- Better line height
+- More padding
+
+## 📁 Project Structure
+
+```
+portfolio-cra/
+├── public/
+│   ├── index.html
+│   ├── resume.pdf       ← ADD YOUR RESUME HERE!
+│   └── assets/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.tsx   ← NEW!
+│   │   ├── ui/
+│   │   ├── Hero.tsx
+│   │   ├── Overview.tsx
+│   │   ├── Technologies.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Career.tsx
+│   │   └── Footer.tsx
+│   ├── data/
+│   │   └── portfolio-data.ts
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── index.css
+├── package.json
+├── tsconfig.json
+└── tailwind.config.js
+```
+
+## 🎨 Customization
+
+### Update Content
+Edit `src/data/portfolio-data.ts`
+
+### Change Colors
+Edit `src/index.css` → `:root` variables
+
+### Add Images
+Place images in `public/assets/` folders
+
+### Customize Chatbot
+Edit `src/components/Navbar.tsx` → Chatbot section
+
+### Change Email
+Edit `src/components/Navbar.tsx` → Line with `mailto:`
+
+## 🌐 Deploy
+
+### Vercel
+```bash
+# Push to GitHub then connect to Vercel
+```
+
+### Netlify
+```bash
+npm run build
+# Drag `build` folder to Netlify
+```
+
+## 📝 Available Scripts
+
+- `npm start` - Development server (port 3000)
+- `npm run build` - Production build
+- `npm test` - Run tests
+- `npm run eject` - Eject from CRA (one-way operation)
+
+## 🎯 Key Improvements
+
+| Before | After |
+|--------|-------|
+| No theme toggle | Dark/Light mode |
+| No chatbot | Interactive chat widget |
+| No resume button | One-click download |
+| Small spacing | Better spacing (gap-8) |
+| rounded-lg | rounded-2xl |
+| Tight text | Better readability |
+
+## 👨‍💻 Author
+
+**Justine M. Hilario**
+- GitHub: [@JustineMHIL28](https://github.com/JustineMHIL28)
+- LinkedIn: [Justine Hilario](https://www.linkedin.com/in/justine-hilario)
+
+---
+
+Built with ❤️ using Create React App, TypeScript, and shadcn/ui
