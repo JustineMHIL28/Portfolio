@@ -40,11 +40,14 @@ export const Navbar = () => {
   }, [darkMode]);
 
   const handleDownloadResume = () => {
-    // You'll need to add your resume PDF to public folder
+    // For live/production - force download with proper headers
     const link = document.createElement('a');
-    link.href = '/resume.docx'; // Put your resume.pdf in public folder
+    link.href = '/resume.docx';
     link.download = 'Justine_Hilario_Resume.docx';
+    link.setAttribute('download', 'Justine_Hilario_Resume.docx');
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   const handleOpenChat = () => {
@@ -113,7 +116,7 @@ export const Navbar = () => {
               variant="outline"
               size="sm"
               onClick={handleDownloadResume}
-              className="border-green-500/50 hover:border-green-500 hover:bg-green-500/10 rounded-xl gap-2"
+              className="border-green-500/50 hover:border-green-500 hover:bg-green-500/10 rounded-xl gap-2 text-white hover:text-white"
             >
               <Download className="w-4 h-4" />
               <span className="hidden sm:inline">Resume</span>
