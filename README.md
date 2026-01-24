@@ -86,11 +86,11 @@ See `TAWK-SETUP.md` for setup!
 portfolio-cra/
 ├── public/
 │   ├── index.html
-│   ├── resume.pdf       ← ADD YOUR RESUME HERE!
+│   ├── resume.pdf
 │   └── assets/
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.tsx   ← NEW!
+│   │   ├── Navbar.tsx
 │   │   ├── ui/
 │   │   ├── Hero.tsx
 │   │   ├── Overview.tsx
