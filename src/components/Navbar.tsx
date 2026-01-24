@@ -40,14 +40,11 @@ export const Navbar = () => {
   }, [darkMode]);
 
   const handleDownloadResume = () => {
-    // For live/production - force download with proper headers
     const link = document.createElement('a');
-    link.href = '/resume.docx';
+    link.href = window.location.origin + '/resume.docx';
     link.download = 'Justine_Hilario_Resume.docx';
-    link.setAttribute('download', 'Justine_Hilario_Resume.docx');
-    document.body.appendChild(link);
+    link.target = '_blank';
     link.click();
-    document.body.removeChild(link);
   };
 
   const handleOpenChat = () => {
