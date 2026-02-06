@@ -270,11 +270,6 @@ export const suppotingprojectsData: Project[] = [
       getAssetPath("assets/project-icon/accas/accas-work-order-page.png"),
       getAssetPath("assets/project-icon/accas/accas-work-order-add-page.png"),
       getAssetPath("assets/project-icon/accas/accas-work-order-edit-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-user-management-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-user-management-add-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-user-management-edit-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-user-management-permissions-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-user-management-logs-users-page.png"),
       getAssetPath("assets/project-icon/accas/accas-report-meter-count-page.png")
     ],
     techimage: [
