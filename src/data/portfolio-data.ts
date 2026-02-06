@@ -363,7 +363,7 @@ export const projectsData: Project[] = [
 export const personalProjectsData: PersonalProject[] = [
   {
     id: 1,
-    name: "Portfolio Website",
+    name: "PW - Portfolio Website",
     subtitle: "Personal Branding",
     image: getAssetPath("assets/project-icon/soon.png"),
     subimage: [],
@@ -398,7 +398,7 @@ export const personalProjectsData: PersonalProject[] = [
   // },
   {
     id: 2,
-    name: "Document Management System",
+    name: "DMS - Document Management System",
     subtitle: "File Organization",
     image: getAssetPath("assets/project-icon/soon.png"),
     subimage: [],
