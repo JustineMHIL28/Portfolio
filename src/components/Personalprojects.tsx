@@ -1,14 +1,14 @@
-// src/components/Projects.tsx
+// src/components/PersonalProjects.tsx
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { projectsData } from '../data/portfolio-data';
+import { personalProjectsData } from '../data/portfolio-data';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { useState } from 'react';
 
-export const Projects = () => {
+export const PersonalProjects = () => {
   const [expandedProjects, setExpandedProjects] = useState<number[]>([]);
 
   const toggleExpand = (projectId: number) => {
@@ -25,7 +25,7 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="personal-projects" className="py-24 relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,19 +35,19 @@ export const Projects = () => {
           className="mb-16"
         >
           <span className="text-green-400 font-mono text-sm uppercase tracking-wider">
-            Collaborative Work
+            My Work
           </span>
           <h2 className="text-5xl md:text-7xl font-bold mt-4 mb-6">
-            Supporting Projects
+            Personal Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Here are some projects I've contributed to as part of collaborative teams.
-            Each project showcases my ability to work effectively with others in building functional, efficient, and user-friendly applications.
+            Projects I've built independently to explore new technologies, solve problems, 
+            and bring my ideas to life. Each project reflects my passion for learning and creating.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project, index) => {
+          {personalProjectsData.map((project, index) => {
             const isExpanded = expandedProjects.includes(project.id);
             const shouldShowButton = project.description.length > 150;
 
