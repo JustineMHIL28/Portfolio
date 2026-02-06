@@ -187,179 +187,6 @@ export const technologiesData: Technology[] = [
   }
 ];
 
-export const projectsData: Project[] = [
-  {
-    id: 1,
-    name: "ACCAS - Contract Management, Monitoring and Reporting System",
-    subtitle: "Internal",
-    image: getAssetPath("assets/project-icon/soon.png"),
-    subimage: [
-      getAssetPath("assets/project-icon/accas/accas-main-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-login-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-dashboard-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-branch-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-branch-add-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-branch-edit-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-copier-models-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-copier-models-add-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-copier-models-edit-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-customers-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-customers-add-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-customers-edit-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-equipment-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-equipment-add-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-equipment-edit-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-work-order-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-work-order-add-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-work-order-edit-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-user-management-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-user-management-add-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-user-management-edit-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-user-management-permissions-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-user-management-logs-users-page.png"),
-      getAssetPath("assets/project-icon/accas/accas-report-meter-count-page.png")
-    ],
-    techimage: [
-      getAssetPath("assets/dev-icon/html5.png"),
-      getAssetPath("assets/dev-icon/css.png"),
-      getAssetPath("assets/dev-icon/react-js.png"),
-      getAssetPath("assets/dev-icon/ts.png"),
-      getAssetPath("assets/dev-icon/shadcn.png"),
-      getAssetPath("assets/dev-icon/laravel.png"),
-      getAssetPath("assets/dev-icon/mysql.png"),
-      getAssetPath("assets/dev-icon/php.png"),
-      getAssetPath("assets/dev-icon/laravel.png"),
-    ],
-    link: "https://dev.accas.able.com.pg/",
-    description: "A comprehensive web application designed to streamline contract lifecycle management from creation to reporting. Features include contract creation and tracking, monitoring dashboards, automated reporting, branch management, customer relationship management, and equipment tracking. Built with React and TypeScript for the frontend, Laravel for backend operations, and MySQL for data storage, with Shadcn UI providing a modern interface."
-  },
-  {
-    id: 2,
-    name: "ISLP - Internal Software License Portal",
-    subtitle: "Internal",
-    image: getAssetPath("assets/project-icon/soon.png"),
-    subimage: [
-      getAssetPath("assets/project-icon/islp/welcomePage.png"),
-      getAssetPath("assets/project-icon/islp/login.png"),
-      getAssetPath("assets/project-icon/islp/forgot.png"),
-      getAssetPath("assets/project-icon/islp/dashboard.png"),
-      getAssetPath("assets/project-icon/islp/branch.png"),
-      getAssetPath("assets/project-icon/islp/branchCreate.png"),
-      getAssetPath("assets/project-icon/islp/branchUpdate.png"),
-      getAssetPath("assets/project-icon/islp/brandList.png"),
-      getAssetPath("assets/project-icon/islp/categoryList.png"),
-      getAssetPath("assets/project-icon/islp/customerList.png"),
-      getAssetPath("assets/project-icon/islp/expiryNotifRules.png"),
-      getAssetPath("assets/project-icon/islp/expiryNotifRulesCreate.png"),
-      getAssetPath("assets/project-icon/islp/expiryNotifRulesUpdate.png"),
-      getAssetPath("assets/project-icon/islp/expiryTracker.png"),
-      getAssetPath("assets/project-icon/islp/licensesList.png"),
-      getAssetPath("assets/project-icon/islp/licensesListCreate.png"),
-      getAssetPath("assets/project-icon/islp/licensesUsageReport.png"),
-      getAssetPath("assets/project-icon/islp/productList.png"),
-      getAssetPath("assets/project-icon/islp/productListCreate.png"),
-      getAssetPath("assets/project-icon/islp/productListUpdate.png"),
-      getAssetPath("assets/project-icon/islp/requestForm.png"),
-      getAssetPath("assets/project-icon/islp/requestFormCreate.png"),
-      getAssetPath("assets/project-icon/islp/approve-reject-request.png"),
-      getAssetPath("assets/project-icon/islp/softwareProductInvoice.png"),
-      getAssetPath("assets/project-icon/islp/typeManagementList.png"),
-      getAssetPath("assets/project-icon/islp/vendorList.png")
-    ],
-    techimage: [
-      getAssetPath("assets/dev-icon/html5.png"),
-      getAssetPath("assets/dev-icon/css.png"),
-      getAssetPath("assets/dev-icon/react-js.png"),
-      getAssetPath("assets/dev-icon/ts.png"),
-      getAssetPath("assets/dev-icon/shadcn.png"),
-      getAssetPath("assets/dev-icon/laravel.png"),
-      getAssetPath("assets/dev-icon/mysql.png"),
-      getAssetPath("assets/dev-icon/php.png"),
-      getAssetPath("assets/dev-icon/laravel.png"),
-    ],
-    link: "https://lms.able.com.pg/",
-    description: "A comprehensive web application designed to manage and track software licenses efficiently. Features include license lifecycle management, request approval workflows, expiry tracking with automated notifications, vendor and product management, and detailed usage reporting. Built with React and TypeScript for the frontend, Laravel for backend operations, and MySQL for data storage, with Shadcn UI providing a modern interface."
-  },
-  {
-    id: 3,
-    name: "AMS - Assets Management System",
-    subtitle: "Internal",
-    image: getAssetPath("assets/project-icon/soon.png"),
-    subimage: [
-      getAssetPath("assets/project-icon/ams/ams-login-page.png"),
-      getAssetPath("assets/project-icon/ams/ams-dashboard-page.png"),
-      getAssetPath("assets/project-icon/ams/ams-backup-page.png"),
-      getAssetPath("assets/project-icon/ams/ams-import-page.png"),
-      getAssetPath("assets/project-icon/ams/ams-requestable-item-page.png"),
-      getAssetPath("assets/project-icon/ams/ams-settings-page.png"),
-      getAssetPath("assets/project-icon/ams/ams-status-label-page.png"),
-      getAssetPath("assets/project-icon/ams/ams-subscription-page.png")
-    ],
-    techimage: [
-      getAssetPath("assets/dev-icon/html5.png"),
-      getAssetPath("assets/dev-icon/css.png"),
-      getAssetPath("assets/dev-icon/react-js.png"),
-      getAssetPath("assets/dev-icon/ts.png"),
-      getAssetPath("assets/dev-icon/shadcn.png"),
-      getAssetPath("assets/dev-icon/laravel.png"),
-      getAssetPath("assets/dev-icon/mysql.png"),
-      getAssetPath("assets/dev-icon/php.png"),
-      getAssetPath("assets/dev-icon/laravel.png"),
-    ],
-    link: "https://ams.able.com.pg/login",
-    description: "A comprehensive web application designed for asset tracking and management operations. Features include asset lifecycle management, backup functionality, data import and export capabilities, requestable items management, detailed status tracking, and comprehensive labeling. Built with React and TypeScript for the frontend, Laravel for backend operations, and MySQL for data storage, with Shadcn UI providing a modern interface."
-  },
-  {
-    id: 4,
-    name: "EN - Engineer Inventory",
-    subtitle: "Internal",
-    image: getAssetPath("assets/project-icon/soon.png"),
-    subimage: [
-      getAssetPath("assets/project-icon/en/en-login-page.png"),
-      getAssetPath("assets/project-icon/en/en-dashboard-page.png"),
-      getAssetPath("assets/project-icon/en/en-inventory-page.png"),
-      getAssetPath("assets/project-icon/en/en-supply-chain-page.png"),
-      getAssetPath("assets/project-icon/en/en-reports-page.png")
-    ],
-    techimage: [
-      getAssetPath("assets/dev-icon/html5.png"),
-      getAssetPath("assets/dev-icon/css.png"),
-      getAssetPath("assets/dev-icon/js.png"),
-      getAssetPath("assets/dev-icon/react-js.png"),
-      getAssetPath("assets/dev-icon/ant-design.png"),
-      getAssetPath("assets/dev-icon/mssql.png"),
-      getAssetPath("assets/dev-icon/node-js.png")
-    ],
-    link: "",
-    description: "A comprehensive web application designed for engineering inventory tracking and management. Features include real-time inventory monitoring, automated stock level alerts, supplier management, procurement workflows, batch tracking, and advanced reporting capabilities. Built with React and JavaScript for the frontend, MS SQL for data storage, with Ant Design providing a modern interface."
-  },
-  {
-    id: 5,
-    name: "SCM - Supply Chain Management",
-    subtitle: "Internal",
-    image: getAssetPath("assets/project-icon/soon.png"),
-    subimage: [
-      getAssetPath("assets/project-icon/scm/scm-login-page.png"),
-      getAssetPath("assets/project-icon/scm/scm-dashboard-page.png"),
-      getAssetPath("assets/project-icon/scm/scm-inventory-page.png"),
-      getAssetPath("assets/project-icon/scm/scm-supply-chain-page.png"),
-      getAssetPath("assets/project-icon/scm/scm-reports-page.png")
-    ],
-    techimage: [
-      getAssetPath("assets/dev-icon/html5.png"),
-      getAssetPath("assets/dev-icon/css.png"),
-      getAssetPath("assets/dev-icon/js.png"),
-      getAssetPath("assets/dev-icon/react-js.png"),
-      getAssetPath("assets/dev-icon/ant-design.png"),
-      getAssetPath("assets/dev-icon/mssql.png"),
-      getAssetPath("assets/dev-icon/node-js.png")
-    ],
-    link: "",
-    description: "A comprehensive web application designed to optimize supply chain operations from procurement to delivery. Features include inventory management, supplier relationship management, order processing, warehouse management, logistics tracking, real-time analytics, automated workflows, and demand forecasting. Built with React and JavaScript for the frontend, MS SQL for data storage, with Ant Design providing a modern interface."
-  }
-];
-
-// ========== PERSONAL PROJECTS ==========
 export const personalProjectsData: PersonalProject[] = [
   {
     id: 1,
@@ -411,11 +238,167 @@ export const personalProjectsData: PersonalProject[] = [
       getAssetPath("assets/dev-icon/laravel.png"),
       getAssetPath("assets/dev-icon/mysql.png"),
       getAssetPath("assets/dev-icon/php.png"),
-      getAssetPath("assets/dev-icon/laravel.png"),
     ],
     link: "",
-    github: "https://github.com/JustineMHIL28/document-management",
+    github: "",
     description: "A comprehensive document management system for organizing, storing, and retrieving files efficiently. Features include file upload and download, folder organization, search functionality, version control, and user permissions. Built with React and integrated with cloud storage APIs for secure file management."
+  }
+];
+
+export const suppotingprojectsData: Project[] = [
+  {
+    id: 1,
+    name: "ACCAS - Contract Management, Monitoring and Reporting System",
+    subtitle: "Contract Tracking",
+    image: getAssetPath("assets/project-icon/soon.png"),
+    subimage: [
+      getAssetPath("assets/project-icon/accas/accas-main-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-login-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-dashboard-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-branch-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-branch-add-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-branch-edit-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-copier-models-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-copier-models-add-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-copier-models-edit-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-customers-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-customers-add-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-customers-edit-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-equipment-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-equipment-add-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-equipment-edit-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-work-order-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-work-order-add-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-work-order-edit-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-user-management-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-user-management-add-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-user-management-edit-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-user-management-permissions-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-user-management-logs-users-page.png"),
+      getAssetPath("assets/project-icon/accas/accas-report-meter-count-page.png")
+    ],
+    techimage: [
+      getAssetPath("assets/dev-icon/html5.png"),
+      getAssetPath("assets/dev-icon/css.png"),
+      getAssetPath("assets/dev-icon/react-js.png"),
+      getAssetPath("assets/dev-icon/ts.png"),
+      getAssetPath("assets/dev-icon/shadcn.png"),
+      getAssetPath("assets/dev-icon/laravel.png"),
+      getAssetPath("assets/dev-icon/mysql.png"),
+      getAssetPath("assets/dev-icon/php.png"),
+    ],
+    link: "https://dev.accas.able.com.pg/",
+    description: "A comprehensive web application designed to streamline contract lifecycle management from creation to reporting. Features include contract creation and tracking, monitoring dashboards, automated reporting, branch management, customer relationship management, and equipment tracking. Built with React and TypeScript for the frontend, Laravel for backend operations, and MySQL for data storage, with Shadcn UI providing a modern interface."
+  },
+  {
+    id: 2,
+    name: "ISLP - Internal Software License Portal",
+    subtitle: "License Tracking",
+    image: getAssetPath("assets/project-icon/soon.png"),
+    subimage: [
+      getAssetPath("assets/project-icon/islp/welcomePage.png"),
+      getAssetPath("assets/project-icon/islp/login.png"),
+      getAssetPath("assets/project-icon/islp/forgot.png"),
+      getAssetPath("assets/project-icon/islp/dashboard.png"),
+      getAssetPath("assets/project-icon/islp/branch.png"),
+      getAssetPath("assets/project-icon/islp/branchCreate.png"),
+      getAssetPath("assets/project-icon/islp/branchUpdate.png"),
+      getAssetPath("assets/project-icon/islp/brandList.png"),
+      getAssetPath("assets/project-icon/islp/categoryList.png"),
+      getAssetPath("assets/project-icon/islp/customerList.png"),
+      getAssetPath("assets/project-icon/islp/expiryNotifRules.png"),
+      getAssetPath("assets/project-icon/islp/expiryNotifRulesCreate.png"),
+      getAssetPath("assets/project-icon/islp/expiryNotifRulesUpdate.png"),
+      getAssetPath("assets/project-icon/islp/expiryTracker.png"),
+      getAssetPath("assets/project-icon/islp/licensesList.png"),
+      getAssetPath("assets/project-icon/islp/licensesListCreate.png"),
+      getAssetPath("assets/project-icon/islp/licensesUsageReport.png"),
+      getAssetPath("assets/project-icon/islp/productList.png"),
+      getAssetPath("assets/project-icon/islp/productListCreate.png"),
+      getAssetPath("assets/project-icon/islp/productListUpdate.png"),
+      getAssetPath("assets/project-icon/islp/requestForm.png"),
+      getAssetPath("assets/project-icon/islp/requestFormCreate.png"),
+      getAssetPath("assets/project-icon/islp/approve-reject-request.png"),
+      getAssetPath("assets/project-icon/islp/softwareProductInvoice.png"),
+      getAssetPath("assets/project-icon/islp/typeManagementList.png"),
+      getAssetPath("assets/project-icon/islp/vendorList.png")
+    ],
+    techimage: [
+      getAssetPath("assets/dev-icon/html5.png"),
+      getAssetPath("assets/dev-icon/css.png"),
+      getAssetPath("assets/dev-icon/react-js.png"),
+      getAssetPath("assets/dev-icon/ts.png"),
+      getAssetPath("assets/dev-icon/shadcn.png"),
+      getAssetPath("assets/dev-icon/laravel.png"),
+      getAssetPath("assets/dev-icon/mysql.png"),
+      getAssetPath("assets/dev-icon/php.png"),
+    ],
+    link: "https://lms.able.com.pg/",
+    description: "A comprehensive web application designed to manage and track software licenses efficiently. Features include license lifecycle management, request approval workflows, expiry tracking with automated notifications, vendor and product management, and detailed usage reporting. Built with React and TypeScript for the frontend, Laravel for backend operations, and MySQL for data storage, with Shadcn UI providing a modern interface."
+  },
+  {
+    id: 3,
+    name: "AMS - Assets Management System",
+    subtitle: "Asset Inventory",
+    image: getAssetPath("assets/project-icon/soon.png"),
+    subimage: [
+      getAssetPath("assets/project-icon/ams/ams-login-page.png"),
+      getAssetPath("assets/project-icon/ams/ams-dashboard-page.png"),
+      getAssetPath("assets/project-icon/ams/ams-backup-page.png"),
+      getAssetPath("assets/project-icon/ams/ams-import-page.png"),
+      getAssetPath("assets/project-icon/ams/ams-requestable-item-page.png"),
+      getAssetPath("assets/project-icon/ams/ams-settings-page.png"),
+      getAssetPath("assets/project-icon/ams/ams-status-label-page.png"),
+      getAssetPath("assets/project-icon/ams/ams-subscription-page.png")
+    ],
+    techimage: [
+      getAssetPath("assets/dev-icon/html5.png"),
+      getAssetPath("assets/dev-icon/css.png"),
+      getAssetPath("assets/dev-icon/react-js.png"),
+      getAssetPath("assets/dev-icon/ts.png"),
+      getAssetPath("assets/dev-icon/shadcn.png"),
+      getAssetPath("assets/dev-icon/laravel.png"),
+      getAssetPath("assets/dev-icon/mysql.png"),
+      getAssetPath("assets/dev-icon/php.png"),
+    ],
+    link: "https://ams.able.com.pg/login",
+    description: "A comprehensive web application designed for asset tracking and management operations. Features include asset lifecycle management, backup functionality, data import and export capabilities, requestable items management, detailed status tracking, and comprehensive labeling. Built with React and TypeScript for the frontend, Laravel for backend operations, and MySQL for data storage, with Shadcn UI providing a modern interface."
+  },
+  {
+    id: 4,
+    name: "EN - Engineer Inventory",
+    subtitle: "Inventory Monitoring",
+    image: getAssetPath("assets/project-icon/soon.png"),
+    subimage: [],
+    techimage: [
+      getAssetPath("assets/dev-icon/html5.png"),
+      getAssetPath("assets/dev-icon/css.png"),
+      getAssetPath("assets/dev-icon/js.png"),
+      getAssetPath("assets/dev-icon/react-js.png"),
+      getAssetPath("assets/dev-icon/ant-design.png"),
+      getAssetPath("assets/dev-icon/mssql.png"),
+      getAssetPath("assets/dev-icon/node-js.png")
+    ],
+    link: "",
+    description: "A comprehensive web application designed for engineering inventory tracking and management. Features include real-time inventory monitoring, automated stock level alerts, supplier management, procurement workflows, batch tracking, and advanced reporting capabilities. Built with React and JavaScript for the frontend, MS SQL for data storage, with Ant Design providing a modern interface."
+  },
+  {
+    id: 5,
+    name: "SCM - Supply Chain Management",
+    subtitle: "Logistics Tracking",
+    image: getAssetPath("assets/project-icon/soon.png"),
+    subimage: [],
+    techimage: [
+      getAssetPath("assets/dev-icon/html5.png"),
+      getAssetPath("assets/dev-icon/css.png"),
+      getAssetPath("assets/dev-icon/js.png"),
+      getAssetPath("assets/dev-icon/react-js.png"),
+      getAssetPath("assets/dev-icon/ant-design.png"),
+      getAssetPath("assets/dev-icon/mssql.png"),
+      getAssetPath("assets/dev-icon/node-js.png")
+    ],
+    link: "",
+    description: "A comprehensive web application designed to optimize supply chain operations from procurement to delivery. Features include inventory management, supplier relationship management, order processing, warehouse management, logistics tracking, real-time analytics, automated workflows, and demand forecasting. Built with React and JavaScript for the frontend, MS SQL for data storage, with Ant Design providing a modern interface."
   }
 ];
 

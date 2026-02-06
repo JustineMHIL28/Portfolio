@@ -72,17 +72,42 @@ export const Hero = () => {
               >
                 <Button
                   size="lg"
-                  className="bg-green-500 hover:bg-green-600 text-black font-semibold group"
-                  onClick={() => document.getElementById('personalProjects')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="
+                    bg-green-500
+                    hover:bg-green-600
+                    text-black
+                    font-semibold
+                    group
+                    rounded-[14px]
+                  "
+                  onClick={() =>
+                    document
+                      .getElementById('personal-projects')
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }
                 >
                   View Projects
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
+
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-green-500/50 hover:border-green-500 hover:bg-green-500/10 text-white hover:text-white"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="
+                    border-green-500/50
+                    hover:border-green-500
+                    hover:bg-green-500/10
+                    text-black
+                    dark:text-white
+                    hover:text-black
+                    dark:hover:text-white
+                    rounded-[14px]
+                  "
+                  onClick={() =>
+                    document
+                      .getElementById('contact')
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }
                 >
                   Get In Touch
                 </Button>

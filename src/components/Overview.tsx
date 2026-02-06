@@ -55,7 +55,7 @@ export const Overview = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="group border-none h-full bg-card/50 backdrop-blur rounded-2xl">
+              <Card className="group border-none shadow-none h-full bg-card/50 backdrop-blur rounded-2xl">
                 <CardHeader className="p-8">
                   <div className="w-16 h-16 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-colors">
                     <service.icon className="w-8 h-8 text-green-400" />

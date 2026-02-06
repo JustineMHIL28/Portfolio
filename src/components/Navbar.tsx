@@ -1,13 +1,12 @@
 // src/components/Navbar.tsx
 
 import { useState, useEffect } from 'react';
-import { Moon, Sun, MessageCircle, Download } from 'lucide-react';
+import { Moon, Sun, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { motion } from 'framer-motion';
 
 export const Navbar = () => {
   const [darkMode, setDarkMode] = useState(true);
-  const [showChatbot, setShowChatbot] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   // Initialize dark mode from localStorage
@@ -48,26 +47,6 @@ export const Navbar = () => {
     link.click();
     document.body.removeChild(link);
   };
-
-  const handleOpenChat = () => {
-    // Open Tawk.to chat widget
-    if (window.Tawk_API) {
-      window.Tawk_API.maximize();
-    }
-  };
-
-  // Initialize Tawk.to
-  useEffect(() => {
-    if (window.Tawk_API) return;
-
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://embed.tawk.to/6974c0d9b2c8d0197e141d0f/1jfo12ksu";
-    script.charset = "UTF-8";
-    script.setAttribute("crossorigin", "*");
-
-    document.head.appendChild(script);
-  }, []);
 
   return (
     <>
@@ -115,20 +94,20 @@ export const Navbar = () => {
               variant="outline"
               size="sm"
               onClick={handleDownloadResume}
-              className="border-green-500/50 hover:border-green-500 hover:bg-green-500/10 rounded-xl gap-2 text-white hover:text-white"
+              className="
+                border-green-500/50
+                hover:border-green-500
+                hover:bg-green-500/10
+                rounded-xl
+                gap-2
+                text-black
+                dark:text-white
+                hover:text-black
+                dark:hover:text-white
+              "
             >
               <Download className="w-4 h-4" />
               <span className="hidden sm:inline">Resume</span>
-            </Button>
-
-            {/* Chatbot Toggle */}
-            <Button
-              size="sm"
-              onClick={handleOpenChat}
-              className="bg-green-500 hover:bg-green-600 text-black rounded-xl gap-2"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span className="hidden sm:inline">Chat</span>
             </Button>
           </motion.div>
         </div>

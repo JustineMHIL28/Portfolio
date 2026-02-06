@@ -46,7 +46,7 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-12 h-12 rounded-lg bg-card border border-border hover:border-green-500/50 flex items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 group"
+                  className="w-12 h-12 rounded-xl bg-card border-none shadow-none hover:border-green-500/50 flex items-center justify-center transition-all duration-300 group"
                   title={social.description}
                 >
                   <Icon className="w-5 h-5 text-muted-foreground group-hover:text-green-400 transition-colors" />

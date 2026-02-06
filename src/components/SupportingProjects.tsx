@@ -1,7 +1,8 @@
-// src/components/PersonalProjects.tsx
+// src/components/Projects.tsx
+
 import { motion } from 'framer-motion';
 import { ArrowRight, X } from 'lucide-react';
-import { personalProjectsData } from '../data/portfolio-data';
+import { suppotingprojectsData } from '../data/portfolio-data';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
@@ -14,7 +15,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 
-export const PersonalProjects = () => {
+export const SupportingProjects = () => {
   const [expandedProjects, setExpandedProjects] = useState<number[]>([]);
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [showAllTech, setShowAllTech] = useState<number[]>([]);
@@ -48,10 +49,10 @@ export const PersonalProjects = () => {
     setSelectedProject(null);
   };
 
-  const selectedProjectData = personalProjectsData.find(p => p.id === selectedProject);
+  const selectedProjectData = suppotingprojectsData.find(p => p.id === selectedProject);
 
   return (
-    <section id="personal-projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,14 +62,14 @@ export const PersonalProjects = () => {
           className="mb-16"
         >
           <span className="text-green-400 font-mono text-sm uppercase tracking-wider">
-            My Work
+            Collaborative Work
           </span>
           <h2 className="text-5xl md:text-7xl font-bold mt-4 mb-6">
-            Personal Projects
+            Supporting Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Projects I've built independently to explore new technologies, solve problems, 
-            and bring my ideas to life. Each project reflects my passion for learning and creating.
+            Here are some projects I've contributed to as part of collaborative teams.
+            Each project showcases my ability to work effectively with others in building functional, efficient, and user-friendly applications.
           </p>
         </motion.div>
 
@@ -81,7 +82,7 @@ export const PersonalProjects = () => {
           className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
-            {personalProjectsData.map((project, index) => {
+            {suppotingprojectsData.map((project, index) => {
               const isExpanded = expandedProjects.includes(project.id);
               const shouldShowButton = project.description.length > 150;
               const isShowingAllTech = showAllTech.includes(project.id);
@@ -133,7 +134,6 @@ export const PersonalProjects = () => {
                             {project.techimage.length} Technologies
                           </Badge>
                         </div>
-
                       </div>
 
                       <CardHeader className="p-8 space-y-3">
@@ -195,18 +195,6 @@ export const PersonalProjects = () => {
                             onClick={() => window.open(project.link, '_blank')}
                           >
                             Visit Site
-                            <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                          </Button>
-                        )}
-
-                        {/* GitHub button */}
-                        {project.github && (
-                          <Button
-                            variant="ghost"
-                            className="w-full justify-between group/btn hover:bg-green-500/10 hover:text-green-400 rounded-xl py-6 text-base font-semibold mt-2"
-                            onClick={() => window.open(project.github, '_blank')}
-                          >
-                            View on GitHub
                             <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                           </Button>
                         )}

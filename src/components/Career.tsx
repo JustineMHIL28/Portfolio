@@ -46,7 +46,7 @@ export const Career = () => {
                 {/* Timeline Dot */}
                 <div className="absolute left-0 md:left-8 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-green-500 border-4 border-background shadow-lg shadow-green-500/50" />
 
-                <Card className="group border-none bg-card/50 backdrop-blur rounded-2xl">
+                <Card className="group border-none bg-card/50 backdrop-blur rounded-2xl shadow-none">
                   <CardHeader className="p-8">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                       <div className="flex gap-4">
@@ -77,9 +77,18 @@ export const Career = () => {
                         </div>
                       </div>
 
-                      <Badge className="bg-green-500/20 text-green-400 border-green-500/50 w-fit px-4 py-1">
+                      {/* <Badge className="
+                        bg-green-500/20
+                        text-zinc-800
+                        dark:text-green-400
+                        border-green-500/50
+                        w-fit
+                        px-4
+                        py-1
+                      " style={{pointerEvents: 'none'}}
+                      >
                         {job.systemUsage}
-                      </Badge>
+                      </Badge> */}
                     </div>
 
                     <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
