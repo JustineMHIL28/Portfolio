@@ -36,7 +36,7 @@ export const Overview = () => {
           <span className="text-green-400 font-mono text-sm uppercase tracking-wider">
             Overview
           </span>
-          <h2 className="text-5xl md:text-7xl font-bold mt-4 mb-6">
+          <h2 className="text-xl md:text-5xl font-bold mt-4 mb-6 tracking-wide">
             What I Do
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl">
