@@ -193,7 +193,9 @@ export const personalProjectsData: PersonalProject[] = [
     name: "PW - Portfolio Website",
     subtitle: "Personal Branding",
     image: getAssetPath("assets/project-icon/soon.png"),
-    subimage: [],
+    subimage: [
+      getAssetPath("assets/project-icon/portfolio/portfolio-dashboard.png"),
+    ],
     techimage: [
       getAssetPath("assets/dev-icon/html5.png"),
       getAssetPath("assets/dev-icon/css.png"),
@@ -205,24 +207,6 @@ export const personalProjectsData: PersonalProject[] = [
     github: "https://github.com/JustineMHIL28/portfolio",
     description: "A modern, responsive portfolio website showcasing my skills, projects, and professional journey. Features include smooth animations, dark mode support, project showcases with detailed descriptions, and an interactive contact form. Built with React, TypeScript, and Shadcn UI for a clean and professional look."
   },
-  // {
-  //   id: 2,
-  //   name: "Task Management App",
-  //   subtitle: "Productivity Tool",
-  //   image: getAssetPath("assets/project-icon/soon.png"),
-  //   subimage: [],
-  //   techimage: [
-  //     getAssetPath("assets/dev-icon/html5.png"),
-  //     getAssetPath("assets/dev-icon/css.png"),
-  //     getAssetPath("assets/dev-icon/react-js.png"),
-  //     getAssetPath("assets/dev-icon/ts.png"),
-  //     getAssetPath("assets/dev-icon/node-js.png"),
-  //     getAssetPath("assets/dev-icon/mysql.png")
-  //   ],
-  //   link: "",
-  //   github: "https://github.com/JustineMHIL28/task-management",
-  //   description: "A full-stack task management application with drag-and-drop functionality, priority settings, and deadline tracking. Features include user authentication, real-time updates, task categorization, calendar view, and progress tracking. Built with React TypeScript frontend and Node.js backend with MySQL database."
-  // },
   {
     id: 2,
     name: "DMS - Document Management System",
@@ -263,9 +247,27 @@ export const personalProjectsData: PersonalProject[] = [
       getAssetPath("assets/dev-icon/php.png"),
     ],
     link: "",
-    github: "",
+    github: "https://github.com/JustineMHIL28/dms",
     description: "A comprehensive document management system for organizing, storing, and retrieving files efficiently. Features include file upload and download, folder organization, search functionality, version control, and user permissions. Built with React and integrated with cloud storage APIs for secure file management."
-  }
+  },
+    {
+    id: 3,
+    name: "TMS - Task Management System",
+    subtitle: "Productivity Tool",
+    image: getAssetPath("assets/project-icon/soon.png"),
+    subimage: [],
+    techimage: [
+      getAssetPath("assets/dev-icon/html5.png"),
+      getAssetPath("assets/dev-icon/css.png"),
+      getAssetPath("assets/dev-icon/react-js.png"),
+      getAssetPath("assets/dev-icon/ts.png"),
+      getAssetPath("assets/dev-icon/node-js.png"),
+      getAssetPath("assets/dev-icon/mysql.png")
+    ],
+    link: "",
+    github: "https://github.com/JustineMHIL28/tms",
+    description: "A full-stack task management application with drag-and-drop functionality, priority settings, and deadline tracking. Features include user authentication, real-time updates, task categorization, calendar view, and progress tracking. Built with React TypeScript frontend and Node.js backend with MySQL database."
+  },
 ];
 
 export const suppotingprojectsData: Project[] = [
