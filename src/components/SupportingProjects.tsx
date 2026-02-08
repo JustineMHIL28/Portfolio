@@ -86,6 +86,8 @@ export const SupportingProjects = () => {
               const isExpanded = expandedProjects.includes(project.id);
               const shouldShowButton = project.description.length > 150;
               const isShowingAllTech = showAllTech.includes(project.id);
+              // ✅ Check if project has subimages
+              const hasSubimages = project.subimage.length > 0;
 
               return (
                 <CarouselItem key={project.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
@@ -98,10 +100,11 @@ export const SupportingProjects = () => {
                     <Card className="group border-none shadow-none h-full flex flex-col bg-card/50 backdrop-blur overflow-hidden rounded-2xl">
                       {/* Project Image - CLICKABLE */}
                       <div 
-                        className="relative h-48 bg-gradient-to-br from-green-500/10 to-emerald-500/10 overflow-hidden border-b border-border cursor-pointer"
-                        onClick={() => project.subimage.length > 0 && openImageModal(project.id)}
+                        className={`relative h-48 bg-gradient-to-br from-green-500/10 to-emerald-500/10 overflow-hidden border-b border-border ${hasSubimages ? 'cursor-pointer' : ''}`}
+                        onClick={() => hasSubimages && openImageModal(project.id)}
                       >
-                        {project.subimage.length > 0 ? (
+                        {/* ✅ SHOW SOON.PNG IF NO SUBIMAGES, OTHERWISE SHOW FIRST SUBIMAGE */}
+                        {hasSubimages ? (
                           <>
                             <img 
                               src={project.subimage[0]} 
@@ -116,10 +119,13 @@ export const SupportingProjects = () => {
                             </div>
                           </>
                         ) : (
+                          // ✅ SHOW SOON IMAGE (project.image) IF NO SUBIMAGES
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="text-8xl font-bold text-green-500/20">
-                              {project.name.split(' ')[0]}
-                            </div>
+                            <img 
+                              src={project.image} 
+                              alt={`${project.name} - Coming Soon`}
+                              className="w-full h-full object-contain p-8"
+                            />
                           </div>
                         )}
 
