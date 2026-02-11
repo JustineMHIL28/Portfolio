@@ -497,7 +497,7 @@ export const footerData: SocialLink[] = [
     id: 6,
     name: "LinkedIn",
     image: getAssetPath("assets/social-icon/linkin.png"),
-    link: "https://www.linkedin.com/in/justine-hilario",
+    link: "https://www.linkedin.com/in/justine-m-hilario-432431359",
     description: "Check out my profile on LinkedIn."
   }
 ];
