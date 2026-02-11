@@ -60,7 +60,7 @@ export const Overview = () => {
                   <div className="w-16 h-16 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition-colors">
                     <service.icon className="w-8 h-8 text-green-400" />
                   </div>
-                  <CardTitle className="text-2xl mb-4 leading-tight">{service.title}</CardTitle>
+                  <CardTitle className="text-1xl mb-4 leading-tight">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="px-8 pb-8">
                   <CardDescription className="text-base leading-relaxed">

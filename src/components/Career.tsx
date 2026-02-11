@@ -62,7 +62,7 @@ export const Career = () => {
                         </div>
 
                         <div>
-                          <CardTitle className="text-2xl mb-3 group-hover:text-green-400 transition-colors leading-tight">
+                          <CardTitle className="text-1xl mb-3 group-hover:text-green-400 transition-colors leading-tight">
                             {job.position}
                           </CardTitle>
                           <a

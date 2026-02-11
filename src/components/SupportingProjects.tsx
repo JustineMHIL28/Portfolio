@@ -86,7 +86,7 @@ export const SupportingProjects = () => {
               const isExpanded = expandedProjects.includes(project.id);
               const shouldShowButton = project.description.length > 150;
               const isShowingAllTech = showAllTech.includes(project.id);
-              // ✅ Check if project has subimages
+              // Check if project has subimages
               const hasSubimages = project.subimage.length > 0;
 
               return (
@@ -103,7 +103,7 @@ export const SupportingProjects = () => {
                         className={`relative h-48 bg-gradient-to-br from-green-500/10 to-emerald-500/10 overflow-hidden border-b border-border ${hasSubimages ? 'cursor-pointer' : ''}`}
                         onClick={() => hasSubimages && openImageModal(project.id)}
                       >
-                        {/* ✅ SHOW SOON.PNG IF NO SUBIMAGES, OTHERWISE SHOW FIRST SUBIMAGE */}
+                        {/* SHOW SOON.PNG IF NO SUBIMAGES, OTHERWISE SHOW FIRST SUBIMAGE */}
                         {hasSubimages ? (
                           <>
                             <img 
@@ -119,7 +119,7 @@ export const SupportingProjects = () => {
                             </div>
                           </>
                         ) : (
-                          // ✅ SHOW SOON IMAGE (project.image) IF NO SUBIMAGES
+                          // SHOW SOON IMAGE (project.image) IF NO SUBIMAGES
                           <div className="absolute inset-0 flex items-center justify-center">
                             <img 
                               src={project.image} 
@@ -129,7 +129,7 @@ export const SupportingProjects = () => {
                           </div>
                         )}
 
-                        <div className="absolute top-4 right-4">
+                        {/* <div className="absolute top-4 right-4">
                           <Badge className="
                             bg-green-500/20
                             text-zinc-800
@@ -139,15 +139,16 @@ export const SupportingProjects = () => {
                           >
                             {project.techimage.length} Technologies
                           </Badge>
-                        </div>
+                        </div> */}
+
                       </div>
 
                       <CardHeader className="p-8 space-y-3">
-                        <CardTitle className="text-2xl font-bold group-hover:text-green-400 transition-colors line-clamp-2 leading-snug uppercase tracking-widest">
+                        <CardTitle className="text-1xl font-bold group-hover:text-green-400 transition-colors line-clamp-2 leading-snug uppercase tracking-widest">
                           {project.name}
                         </CardTitle>
                         {project.subtitle && (
-                          <p className="text-base text-green-400 font-semibold">{project.subtitle}</p>
+                          <p className="text-sm text-green-400 font-semibold">{project.subtitle}</p>
                         )}
                       </CardHeader>
 
@@ -167,7 +168,7 @@ export const SupportingProjects = () => {
                         </div>
 
                         {/* Tech Stack Icons */}
-                        <div className="flex flex-wrap gap-3 mb-8">
+                        <div className="flex flex-wrap gap-3 mb-7">
                           {(isShowingAllTech ? project.techimage : project.techimage.slice(0, 5)).map((tech, idx) => (
                             <div
                               key={idx}

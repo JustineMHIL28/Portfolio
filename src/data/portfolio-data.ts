@@ -190,7 +190,7 @@ export const technologiesData: Technology[] = [
 export const personalProjectsData: PersonalProject[] = [
   {
     id: 1,
-    name: "PW - Portfolio Website",
+    name: "My Portfolio",
     subtitle: "Personal Branding",
     image: getAssetPath("assets/project-icon/soon.png"),
     subimage: [
@@ -209,7 +209,7 @@ export const personalProjectsData: PersonalProject[] = [
   },
   {
     id: 2,
-    name: "DMS - Document Management System",
+    name: "Document Management System",
     subtitle: "File Organization",
     image: getAssetPath("assets/project-icon/soon.png"),
     subimage: [
@@ -252,7 +252,7 @@ export const personalProjectsData: PersonalProject[] = [
   },
     {
     id: 3,
-    name: "TMS - Task Management System",
+    name: "Task Management System",
     subtitle: "Productivity Tool",
     image: getAssetPath("assets/project-icon/soon.png"),
     subimage: [],
@@ -273,7 +273,7 @@ export const personalProjectsData: PersonalProject[] = [
 export const suppotingprojectsData: Project[] = [
   {
     id: 1,
-    name: "ACCAS - Contract Management, Monitoring and Reporting System",
+    name: "Contract Management System",
     subtitle: "Contract Tracking",
     image: getAssetPath("assets/project-icon/soon.png"),
     subimage: [
@@ -312,7 +312,7 @@ export const suppotingprojectsData: Project[] = [
   },
   {
     id: 2,
-    name: "ISLP - Internal Software License Portal",
+    name: "Internal Software License Portal",
     subtitle: "License Tracking",
     image: getAssetPath("assets/project-icon/soon.png"),
     subimage: [
@@ -358,7 +358,7 @@ export const suppotingprojectsData: Project[] = [
   },
   {
     id: 3,
-    name: "AMS - Assets Management System",
+    name: "Assets Management System",
     subtitle: "Asset Inventory",
     image: getAssetPath("assets/project-icon/soon.png"),
     subimage: [
