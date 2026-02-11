@@ -41,7 +41,7 @@ export const Hero = () => {
               >
                 <Sparkles className="w-5 h-5 text-green-400" />
                 <span className="text-green-400 font-mono text-sm uppercase tracking-wider">
-                  Web Developer / Engineer
+                  Full Stack Developer
                 </span>
               </motion.div>
 

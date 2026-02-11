@@ -40,7 +40,7 @@ export const Overview = () => {
             What I Do
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            I'm a Web Developer with hands-on experience in building and maintaining web applications.
+            Full Stack Developer with hands-on experience in building and maintaining web applications.
             Focused on writing clean, efficient code and continuously learning new technologies.
             Experienced in working with teams to deliver reliable internal and external systems.
           </p>

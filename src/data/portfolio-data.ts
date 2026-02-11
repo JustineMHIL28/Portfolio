@@ -429,12 +429,12 @@ export const careerData: Career[] = [
     company: "Bangalow Pty. Ltd. Co.",
     location: "Papua New Guinea / Marand Family Resort – Bauang, La Union",
     duration: "April 2025 - January 2026",
-    period: "9 months",
+    period: "10 months",
     image: getAssetPath("assets/company-icon/bangalow.jpg"),
     link: "https://www.linkedin.com/company/bangalow/posts/?feedView=all",
     description: "• Contributed to the development and maintenance of internal and client-facing web applications.\n• Assisted in implementing features, fixing bugs, and enhancing system performance.\n• Collaborated with senior developers to meet project requirements and deadlines.\n• Participated in code reviews and followed best practices for maintainable code.",
-    systemUsage: "Internal",
-    techStack: ["HTML", "CSS", "React JS", "Laravel", "PHP", "ShadCN UI", "MS SQL", "MySQL", "RESTful APIs", "GitHub"]
+    systemUsage: "",
+    techStack: ["HTML", "CSS", "React", "TypeScript", "Laravel", "PHP", "ShadCN UI", "Tailwind CSS", "MySQL", "RESTful APIs", "Git", "GitHub"]
   },
   {
     id: 2,
@@ -446,8 +446,8 @@ export const careerData: Career[] = [
     image: getAssetPath("assets/company-icon/lloyd-laboratoties-inc.jpeg"),
     link: "https://www.linkedin.com/company/lloyd-laboratories-inc/posts/?feedView=all",
     description: "• Built and maintained internal web applications for business operations.\n• Enhanced system features and resolved technical issues efficiently.\n• Worked closely with the development team to meet project milestones.\n• Applied coding best practices to ensure maintainable and reliable code.",
-    systemUsage: "Internal",
-    techStack: ["HTML", "CSS", "Ant Design", "React JS", "Node.js", "MS SQL", "RESTful APIs", "GitHub"]
+    systemUsage: "",
+    techStack: ["HTML", "CSS", "Ant Design", "React", "JavaScript", "Node.js", "Express.js", "MSSQL", "RESTful APIs", "Git", "GitHub"]
   },
   {
     id: 3,
@@ -459,8 +459,8 @@ export const careerData: Career[] = [
     image: getAssetPath("assets/company-icon/gp-next-solution-inc.png"),
     link: "https://www.linkedin.com/company/gp-next-inc/posts/?feedView=all",
     description: "• Designed, developed, and maintained web applications for external clients.\n• Built reusable and efficient front-end and back-end components.\n• Collaborated with cross-functional teams on UI, backend logic, and database design.\n• Ensured system reliability, performance, and code quality.",
-    systemUsage: "External",
-    techStack: ["HTML", "CSS", "React JS", "Node.js", "MySQL", "RESTful APIs", "Git"]
+    systemUsage: "",
+    techStack: ["HTML", "CSS", "Ant Design", "React", "JavaScript", "Node.js", "Express.js", "MSSQL", "RESTful APIs", "Git", "GitHub"]
   }
 ];
 
