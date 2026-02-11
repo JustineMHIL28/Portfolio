@@ -162,7 +162,7 @@ npm run build
 
 **Justine M. Hilario**
 - GitHub: [@JustineMHIL28](https://github.com/JustineMHIL28)
-- LinkedIn: [Justine Hilario](https://www.linkedin.com/in/justine-hilario)
+- LinkedIn: [Justine Hilario](https://www.linkedin.com/in/justine-m-hilario-432431359)
 
 ---
 
