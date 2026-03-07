@@ -32,7 +32,7 @@ export const SupportingProjects = () => {
   useEffect(() => {
     setCurrentImageIndex(0);
     if (emblaApi) emblaApi.scrollTo(0);
-  }, [selectedProject]);
+  }, [selectedProject, emblaApi]);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -118,8 +118,6 @@ export const SupportingProjects = () => {
         <DialogContent className="w-screen h-[100dvh] max-w-none lg:w-[92vw] lg:max-w-[92vw] lg:h-[88vh] p-0 gap-0 rounded-none lg:rounded-2xl border-0 lg:border border-border bg-background overflow-hidden">
           {selectedProjectData && (
             <div className="flex flex-col lg:flex-row w-full h-full">
-
-              {/* IMAGE — mobile: 45dvh, desktop: full left height */}
               <div className="w-full lg:w-[60%] flex flex-col shrink-0 h-[45dvh] lg:h-full">
                 <div className="flex-1 min-h-0 overflow-hidden" ref={emblaRef}>
                   <div className="flex h-full">
@@ -141,8 +139,6 @@ export const SupportingProjects = () => {
                   <button onClick={scrollNext} className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center"><ChevronRight className="w-4 h-4 text-white" /></button>
                 </div>
               </div>
-
-              {/* DETAILS — mobile: scrollable rest, desktop: fixed right */}
               <div className="w-full lg:w-[40%] flex-1 lg:flex-none lg:h-full flex flex-col overflow-y-auto border-border">
                 <div className="px-6 pt-6 pb-4 border-border bg-green-500/5 shrink-0">
                   <span className="text-[10px] text-green-400/50 font-mono uppercase tracking-widest">

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { MapPin, Calendar, ExternalLink } from 'lucide-react';
 import { careerData } from '../data/portfolio-data';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 
 export const Career = () => {

@@ -5,33 +5,26 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
 
 export const Hero = () => {
-  // Para sa GitHub Pages deployment
   const basename = process.env.PUBLIC_URL || '';
   const profileImage = `${basename}/profile.jpg`;
-  const backgroundImage = `${basename}/background.jpg`;
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-[100dvh] flex items-center justify-center relative overflow-hidden">
       {/* Blurred Background Image - Full Screen */}
-      <div className="absolute inset-0">
-        <img 
+      <div className="absolute inset-0 w-full h-full">
+        <img
           src={profileImage}
-          alt="background"
-          className="w-full h-full object-cover blur-1xl opacity-30"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover blur-sm opacity-20"
         />
         <div className="absolute inset-0 bg-black/70" />
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-emerald-500/10" />
-      
-      {/* Animated Accents */}
-      {/* <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse delay-700" />
-      </div> */}
+      <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-emerald-500/10 pointer-events-none" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 pt-24 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
@@ -75,14 +68,7 @@ export const Hero = () => {
               >
                 <Button
                   size="lg"
-                  className="
-                    bg-green-500
-                    hover:bg-green-600
-                    text-black
-                    font-semibold
-                    group
-                    rounded-[14px]
-                  "
+                  className="bg-green-500 hover:bg-green-600 text-black font-semibold group rounded-[14px]"
                   onClick={() =>
                     document
                       .getElementById('personal-projects')
@@ -96,16 +82,7 @@ export const Hero = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="
-                    border-green-500/50
-                    hover:border-green-500
-                    hover:bg-green-500/10
-                    text-black
-                    dark:text-white
-                    hover:text-black
-                    dark:hover:text-white
-                    rounded-[14px]
-                  "
+                  className="border-green-500/50 hover:border-green-500 hover:bg-green-500/10 text-black dark:text-white hover:text-black dark:hover:text-white rounded-[14px]"
                   onClick={() =>
                     document
                       .getElementById('contact')
@@ -116,41 +93,6 @@ export const Hero = () => {
                 </Button>
               </motion.div>
             </div>
-
-            {/* Right Column - Profile Image (Hidden on Mobile) */}
-            {/* <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="hidden md:flex relative justify-center items-center"
-            >
-
-              <div className="absolute inset-0 flex justify-center items-center">
-                <img 
-                  src={profileImage}
-                  alt="background"
-                  className="w-80 h-80 md:w-96 md:h-96 rounded-full object-cover blur-2xl opacity-30"
-                />
-              </div>
-
-              <div className="relative">
-
-                <div className="absolute inset-0 bg-green-500/20 rounded-full blur-2xl animate-pulse" />
-                
-                <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-green-500/30 shadow-2xl shadow-green-500/20">
-                  <img 
-                    src={profileImage}
-                    alt="Justine M. Hilario"
-                    className="w-full h-full object-cover"
-                  />
-          
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                </div>
-      
-                <div className="absolute -inset-4 border border-green-500/20 rounded-full animate-ping" style={{ animationDuration: '3s' }} />
-                <div className="absolute -inset-8 border border-green-500/10 rounded-full animate-ping" style={{ animationDuration: '4s' }} />
-              </div>
-            </motion.div> */}
           </div>
         </div>
       </div>
@@ -160,7 +102,7 @@ export const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <div className="w-6 h-10 border-2 border-green-500/30 rounded-full flex justify-center p-2">
           <motion.div

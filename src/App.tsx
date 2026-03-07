@@ -11,7 +11,7 @@ function App() {
   return (
     <div
       className="
-        min-h-screen
+        min-h-screen w-full
         bg-zinc-200 text-zinc-900
         dark:bg-background dark:text-foreground
         transition-colors duration-300
