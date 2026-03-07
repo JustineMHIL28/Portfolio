@@ -101,10 +101,46 @@ export const personalProjectsData: PersonalProject[] = [
     image: getAssetPath("assets/project-icon/soon.png"),
     subimage: [
       {
-        src: getAssetPath("assets/project-icon/portfolio/portfolio-dashboard.png"),
-        title: "Portfolio Dashboard",
-        subtitle: "Main Landing Page",
-        description: "The main landing page of my personal portfolio showcasing my skills, experience, and projects in a clean and modern layout."
+        src: getAssetPath("assets/project-icon/portfolio/Screenshot 2026-03-07 121552.png"),
+        title: "Hero — Landing Page",
+        subtitle: "First Impression",
+        description: "The hero section of my personal portfolio featuring my name, role, and call-to-action buttons. Designed with a blurred background, smooth entrance animations, and a scroll indicator for a polished first impression."
+      },
+      {
+        src: getAssetPath("assets/project-icon/portfolio/Screenshot 2026-03-07 121613.png"),
+        title: "Overview — What I Do",
+        subtitle: "Skills Summary",
+        description: "A concise overview section highlighting my core competencies as a Full Stack Developer, including website development, software development, and third-party integrations."
+      },
+      {
+        src: getAssetPath("assets/project-icon/portfolio/Screenshot 2026-03-07 121637.png"),
+        title: "Technologies — Tech Stack",
+        subtitle: "Tools & Languages",
+        description: "An interactive technology showcase displaying all the tools, frameworks, and languages I work with — from HTML and CSS to React, Laravel, TypeScript, and more."
+      },
+      {
+        src: getAssetPath("assets/project-icon/portfolio/Screenshot 2026-03-07 121654.png"),
+        title: "Personal Projects",
+        subtitle: "My Own Builds",
+        description: "A carousel showcasing projects I built independently, each with tech stack icons, descriptions, and links to live sites or GitHub repositories."
+      },
+      {
+        src: getAssetPath("assets/project-icon/portfolio/Screenshot 2026-03-07 121729.png"),
+        title: "Supporting Projects — Detail",
+        subtitle: "Team Project Gallery",
+        description: "Detailed view of a supporting project with a full screenshot carousel, tech stack, description, and a link to the live site for in-depth exploration."
+      },
+      {
+        src: getAssetPath("assets/project-icon/portfolio/Screenshot 2026-03-07 121818.png"),
+        title: "Career — Work Experience",
+        subtitle: "Professional Journey",
+        description: "A timeline-style career section listing my work experience, including company names, positions, durations, tech stacks used, and key contributions at each role."
+      },
+      {
+        src: getAssetPath("assets/project-icon/portfolio/Screenshot 2026-03-07 121832.png"),
+        title: "Footer — Contact & Socials",
+        subtitle: "Get In Touch",
+        description: "The footer section featuring my social media links including GitHub, LinkedIn, Facebook, Gmail, and Indeed — making it easy for recruiters and collaborators to reach out."
       },
     ],
     techimage: [
@@ -161,223 +197,223 @@ export const personalProjectsData: PersonalProject[] = [
         description: "Complete list of all uploaded documents with filtering, sorting, and search capabilities. Displays document name, category, department, and date uploaded."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_17_42.png"), 
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_17_42.png"),
         title: "Documents — Add",
         subtitle: "Upload New Document",
         description: "Document upload form where users can attach files, assign categories, select departments, and add relevant metadata before submitting."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_17_54.png"), // Documents — Edit
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_17_54.png"),
         title: "Documents — Edit",
         subtitle: "Update Document",
         description: "Form for uploading and updating documents, including file attachment, category assignment, department selection, and metadata input."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_18_26.png"), // Documents — Details
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_18_26.png"),
         title: "Documents — Details",
         subtitle: "View Document Details",
         description: "Detailed view of a document showing its information, file preview, version history, download options, and activity logs."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_18_33.png"), // Documents — Preview
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_18_33.png"),
         title: "Documents — Preview",
         subtitle: "Reports Index",
         description: "Index page listing all reports with options to preview, download, or upload new files."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_18_38.png"), // Documents — Activity Log
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_18_38.png"),
         title: "Documents — Activity Log",
         subtitle: "Document Change History",
         description: "Chronological log showing all actions performed on a document including uploads, edits, downloads, and permission changes."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_18_47.png"), // Documents — Visibility
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_18_47.png"),
         title: "Documents — Visibility",
         subtitle: "Public, Private or by Department",
         description: "Page to manage document visibility settings including public access, private restrictions, or department-specific permissions."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_18_53.png"), // Documents — By Department
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_18_53.png"),
         title: "Documents — By Department",
         subtitle: "All Departments You Are Member Of",
         description: "Page showing documents filtered by departments the user belongs to."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_07.png"), // Department — Overview
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_07.png"),
         title: "Department — Overview",
         subtitle: "All Department",
         description: "Overview of all departments with structured view, including status indicators and tracking."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_15.png"), // Department — Add
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_15.png"),
         title: "Department — Add",
         subtitle: "Department Add",
         description: "Form for creating a new department including department name and details."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_26.png"), // Department — Edit
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_26.png"),
         title: "Department — Edit",
         subtitle: "Department Edit",
         description: "Form for editing existing department details."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_33.png"), // Department — View all Detials
-        title: "Department — View all Detials",
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_33.png"),
+        title: "Department — View all Details",
         subtitle: "Department Management",
         description: "Page displaying all department details and management options."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_40.png"), // Department — Invite Users
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_40.png"),
         title: "Department — Invite Users",
         subtitle: "Department",
         description: "Form for inviting new users to a department."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_47.png"), // Department — Gmail Invite
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_47.png"),
         title: "Department — Gmail Invite",
         subtitle: "Department",
         description: "Page to send department invitations via Gmail to users."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_53.png"), // Department — Invite User via email
-        title: "Department — Invite User via email",
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_19_53.png"),
+        title: "Department — Invite User via Email",
         subtitle: "Create New Department",
         description: "Form for sending a department invitation by email."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_20_09.png"), // Department — Delete
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_20_09.png"),
         title: "Department — Delete",
         subtitle: "User Management Index",
         description: "Page to remove a department from the system."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_20_27.png"), // Department — Archive
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_20_27.png"),
         title: "Department — Archive",
         subtitle: "Create New User Account",
         description: "Page displaying archived departments with options to review or restore."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_20_38.png"), // Category —Overview
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_20_38.png"),
         title: "Category — Overview",
         subtitle: "Category Overview",
         description: "Page listing all categories with options to manage them."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_20_47.png"), // Category —Add
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_20_47.png"),
         title: "Category — Add",
         subtitle: "Add New Category",
         description: "Form to create a new document category."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_21_05.png"), // Category — Edit
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_21_05.png"),
         title: "Category — Edit",
         subtitle: "Edit Category",
         description: "Form to update existing category details."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_21_16.png"), // Category — Delete
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_21_16.png"),
         title: "Category — Delete",
         subtitle: "Delete Category",
         description: "Confirmation page for removing a category."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/Screenshot 2026-03-07 112554.png"), // Category — Archive
+        src: getAssetPath("assets/project-icon/dms/Screenshot 2026-03-07 112554.png"),
         title: "Category — Archive",
         subtitle: "Archive Category",
         description: "Page showing archived categories with options to review or restore them."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/Screenshot 2026-03-07 111922.png"), // Category — Details
+        src: getAssetPath("assets/project-icon/dms/Screenshot 2026-03-07 111922.png"),
         title: "Category — Details",
         subtitle: "Details Category",
         description: "Detailed view of a category including assigned members and related documents."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/Screenshot 2026-03-07 112012.png"), // Category — Add Member
+        src: getAssetPath("assets/project-icon/dms/Screenshot 2026-03-07 112012.png"),
         title: "Category — Add Member",
         subtitle: "Add Member Category",
         description: "Form for adding a member to a specific category for document access and collaboration."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_04.png"), // User Management -Overview
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_04.png"),
         title: "User Management — Overview",
         subtitle: "Overview",
         description: "Page displaying all system users."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_11.png"), // User Management - add
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_11.png"),
         title: "User Management — Add",
         subtitle: "Add User",
         description: "Form to create a new user account."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_23.png"), // User Management - edit
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_23.png"),
         title: "User Management — Edit",
         subtitle: "Edit User",
         description: "Form to update user account details."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_32.png"), // User Management - Permisson
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_32.png"),
         title: "User Management — Permissions",
         subtitle: "Permissions",
         description: "Page to assign roles and access permissions to users."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_39.png"), // User Management - View Change
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_39.png"),
         title: "User Management — View Changes",
         subtitle: "Change History",
         description: "Page showing modifications performed on user accounts."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_44.png"), // User Management - Change History
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_44.png"),
         title: "User Management — Change History",
         subtitle: "Activity Log",
         description: "Log of user actions and system activities."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_52.png"), // Audit Log -Overview
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_52.png"),
         title: "Audit Log — Overview",
         subtitle: "Audit Trail",
         description: "Page showing all system audit logs including user and admin activities."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_58.png"), // Settings - Overview
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_58.png"),
         title: "Settings — Overview",
         subtitle: "Settings Overview",
         description: "Page providing access to all system configuration settings."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_06.png"), // Profile
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_06.png"),
         title: "Profile",
         subtitle: "Profile Overview",
         description: "Page showing user personal details, role, department, and recent activity."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_13.png"), // Profile — Change Background
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_13.png"),
         title: "Profile — Change Background",
         subtitle: "Edit Personal Information",
         description: "Form to update personal details such as name, email, contact information, and profile photo."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_21.png"), // Profile — Change Profile
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_21.png"),
         title: "Profile — Change Profile",
         subtitle: "Password Update",
         description: "Form for updating account password securely."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_26.png"), // Profile — Update Information
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_26.png"),
         title: "Profile — Update Information",
         subtitle: "Update Information",
         description: "Form allowing users to update their personal information including name, email, and other profile details."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_33.png"), // Profile — Update Email
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_33.png"),
         title: "Profile — Update Email",
         subtitle: "Update Email",
         description: "Interface for users to change their registered email address with verification and confirmation."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_40.png"), // Profile — Change Password
+        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-profile-2026-03-07-08_23_40.png"),
         title: "Profile — Change Password",
         subtitle: "Change Password",
         description: "Secure page where users can update their account password by entering the current password and a new one."
