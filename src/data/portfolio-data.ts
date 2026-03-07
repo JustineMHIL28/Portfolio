@@ -281,10 +281,22 @@ export const personalProjectsData: PersonalProject[] = [
         description: "Confirmation page for removing a category."
       },
       {
-        src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_21_55.png"), // Settings
-        title: "Settings",
-        subtitle: "Settings",
-        description: "Main settings page for system configuration."
+        src: getAssetPath("assets/project-icon/dms/Screenshot 2026-03-07 112554.png"), // Category — Archive
+        title: "Category — Archive",
+        subtitle: "Archive Category",
+        description: "Page showing archived categories with options to review or restore them."
+      },
+      {
+        src: getAssetPath("assets/project-icon/dms/Screenshot 2026-03-07 111922.png"), // Category — Details
+        title: "Category — Details",
+        subtitle: "Details Category",
+        description: "Detailed view of a category including assigned members and related documents."
+      },
+      {
+        src: getAssetPath("assets/project-icon/dms/Screenshot 2026-03-07 112012.png"), // Category — Add Member
+        title: "Category — Add Member",
+        subtitle: "Add Member Category",
+        description: "Form for adding a member to a specific category for document access and collaboration."
       },
       {
         src: getAssetPath("assets/project-icon/dms/screencapture-127-0-0-1-8000-dashboard-2026-03-07-08_22_04.png"), // User Management -Overview
