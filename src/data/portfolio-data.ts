@@ -451,6 +451,44 @@ export const personalProjectsData: PersonalProject[] = [
     github: "https://github.com/JustineMHIL28/tms",
     description: "A full-stack task management application with drag-and-drop functionality, priority settings, and deadline tracking. Features include user authentication, real-time updates, task categorization, calendar view, and progress tracking. Built with React TypeScript frontend and Node.js backend with MySQL database."
   },
+  {
+    id: 4,
+    name: "Invotrack",
+    subtitle: "Inventory Tracking System",
+    image: getAssetPath("assets/project-icon/soon.png"),
+    subimage: [],
+    techimage: [
+      getAssetPath("assets/dev-icon/html5.png"),
+      getAssetPath("assets/dev-icon/css.png"),
+      getAssetPath("assets/dev-icon/react-js.png"),
+      getAssetPath("assets/dev-icon/ts.png"),
+      getAssetPath("assets/dev-icon/laravel.png"),
+      getAssetPath("assets/dev-icon/mysql.png"),
+      getAssetPath("assets/dev-icon/php.png"),
+    ],
+    link: "",
+    github: "",
+    description: "A comprehensive inventory tracking and management system designed to streamline stock monitoring, automate alerts for low inventory levels, and provide real-time visibility into warehouse operations. Built with React, TypeScript, Laravel, and MySQL for efficient data management and reporting."
+  },
+  {
+    id: 5,
+    name: "Biotrack 360",
+    subtitle: "Biometric Tracking Platform",
+    image: getAssetPath("assets/project-icon/soon.png"),
+    subimage: [],
+    techimage: [
+      getAssetPath("assets/dev-icon/html5.png"),
+      getAssetPath("assets/dev-icon/css.png"),
+      getAssetPath("assets/dev-icon/react-js.png"),
+      getAssetPath("assets/dev-icon/ts.png"),
+      getAssetPath("assets/dev-icon/laravel.png"),
+      getAssetPath("assets/dev-icon/mysql.png"),
+      getAssetPath("assets/dev-icon/php.png"),
+    ],
+    link: "",
+    github: "",
+    description: "A 360-degree biometric tracking platform for managing employee attendance, access control, and identity verification. Features include real-time monitoring, detailed reporting, automated notifications, and integration with biometric devices. Built with React, TypeScript, Laravel, and MySQL."
+  },
 ];
 
 export const suppotingprojectsData: Project[] = [

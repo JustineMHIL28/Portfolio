@@ -1,124 +1,62 @@
-// src/components/Footer.tsx
-
-import { motion, useInView } from 'framer-motion';
-import { Mail, Facebook, Github, Linkedin, FileText } from 'lucide-react';
+import { useReveal } from '../hooks/useReveal';
 import { footerData } from '../data/portfolio-data';
-import { useRef } from 'react';
+import { Mail, Facebook, Github, Linkedin, FileText, ArrowUp } from 'lucide-react';
+import { Card, CardContent } from './ui/card';
+import { motion } from 'framer-motion';
+import { useMagneticButton } from '../hooks/useMagneticButton';
 
-const socialIcons: Record<string, React.ComponentType<any>> = {
-  Gmail: Mail,
-  Facebook: Facebook,
-  GitHub: Github,
-  LinkedIn: Linkedin,
-  Indeed: FileText,
-};
+const icons: Record<string, React.ComponentType<any>> = { Gmail: Mail, Facebook, GitHub: Github, LinkedIn: Linkedin, Indeed: FileText };
 
 export const Footer = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
+  const { ref, revealed } = useReveal();
+  const socialRef = useMagneticButton(0.2);
 
   return (
-    <footer id="contact" className="py-12 sm:py-16 border-t border-border relative overflow-hidden">
-      {/* Top gradient line */}
-      <motion.div
-        className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-500/50 to-transparent"
-        initial={{ scaleX: 0 }}
-        animate={isInView ? { scaleX: 1 } : {}}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-      />
+    <footer id="contact" className="py-12 sm:py-16 lg:py-20 bg-background transition-colors duration-500">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6" ref={ref}>
+        <div className={`reveal-blur ${revealed ? 'revealed' : ''}`}>
+          <Card className="mb-8 sm:mb-12 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+            <CardContent className="p-5 sm:p-8 lg:p-10">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-8">
+                <div>
+                  <span className="text-green-400 font-mono text-xs tracking-wider">Get in Touch</span>
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mt-2 mb-2 sm:mb-3">
+                    Let's build something <span className="text-shimmer">amazing</span>
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground max-w-sm">Open to new opportunities and collaborations.</p>
+                </div>
 
-      {/* Background glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-48 bg-green-500/5 rounded-full blur-3xl"
-          animate={{ opacity: [0.5, 0.8, 0.5] }}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-        />
-      </div>
+                <div className="flex gap-2 flex-wrap" ref={socialRef}>
+                  {footerData.map((s, i) => {
+                    const Icon = icons[s.name] || Mail;
+                    return (
+                      <motion.a key={s.id} href={s.link} target="_blank" rel="noopener noreferrer" whileHover={{ y: -3, scale: 1.05 }} className="magnetic-btn w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-muted/50 hover:bg-green-500/10 flex items-center justify-center transition-all">
+                        <Icon className="w-4 h-4 text-muted-foreground hover:text-green-400 transition-colors" />
+                      </motion.a>
+                    );
+                  })}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-      <div className="container mx-auto px-4" ref={ref}>
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 sm:gap-8 mb-8 sm:mb-12">
-          {/* Heading */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Let's Connect</h3>
-            <p className="text-muted-foreground text-sm sm:text-base">Ready to build something amazing together?</p>
-          </motion.div>
-
-          {/* Social Icons */}
-          <motion.div
-            className="flex gap-2 sm:gap-3 flex-wrap"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          >
-            {footerData.map((social, index) => {
-              const Icon = socialIcons[social.name] || Mail;
-              return (
-                <motion.a
-                  key={social.id}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{
-                    delay: 0.3 + index * 0.08,
-                    duration: 0.4,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  whileHover={{ scale: 1.15, y: -4 }}
-                  whileTap={{ scale: 0.92 }}
-                  className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-card flex items-center justify-center transition-all duration-300 group cursor-pointer"
-                  title={social.description}
-                >
-                  <motion.div className="absolute inset-0 rounded-xl bg-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <motion.div className="absolute inset-0 rounded-xl border border-green-500/0 group-hover:border-green-500/30 transition-all duration-300" />
-                  <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-green-400 transition-colors duration-300 relative z-10" />
-                </motion.a>
-              );
-            })}
-          </motion.div>
+          <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-muted-foreground font-mono">© 2026 Justine M. Hilario</p>
+            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+              <span>Built with</span>
+              <span className="text-green-400">React</span>
+              <span>&</span>
+              <span className="text-green-400">TypeScript</span>
+              <motion.button
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="ml-3 w-7 h-7 rounded-lg bg-muted/50 hover:bg-green-500/10 flex items-center justify-center transition-all"
+              >
+                <ArrowUp className="w-3.5 h-3.5 text-muted-foreground hover:text-green-400 transition-colors duration-300" />
+              </motion.button>
+            </div>
+          </div>
         </div>
-
-        {/* Bottom bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="pt-6 sm:pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4"
-        >
-          <motion.p
-            className="text-xs sm:text-sm text-muted-foreground font-mono text-center sm:text-left"
-            initial={{ opacity: 0, x: -10 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.6, duration: 0.5 }}
-          >
-            © 2024 Justine M. Hilario. All rights reserved.
-          </motion.p>
-          <motion.p
-            className="text-xs sm:text-sm text-muted-foreground text-center sm:text-right"
-            initial={{ opacity: 0, x: 10 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.65, duration: 0.5 }}
-          >
-            Built with{' '}
-            <motion.span className="text-green-400" whileHover={{ scale: 1.1 }} style={{ display: 'inline-block' }}>
-              React
-            </motion.span>
-            ,{' '}
-            <motion.span className="text-green-400" whileHover={{ scale: 1.1 }} style={{ display: 'inline-block' }}>
-              TypeScript
-            </motion.span>{' '}
-            &{' '}
-            <motion.span className="text-green-400" whileHover={{ scale: 1.1 }} style={{ display: 'inline-block' }}>
-              shadcn/ui
-            </motion.span>
-          </motion.p>
-        </motion.div>
       </div>
     </footer>
   );

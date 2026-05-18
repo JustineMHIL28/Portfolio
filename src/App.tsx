@@ -6,19 +6,16 @@ import { PersonalProjects } from './components/PersonalProjects';
 import { SupportingProjects } from './components/SupportingProjects';
 import { Career } from './components/Career';
 import { Footer } from './components/Footer';
+import { useSpotlight } from './hooks/useSpotlight';
 
 function App() {
-  return (
-    <div
-      className="
-        min-h-screen w-full
-        bg-zinc-200 text-zinc-900
-        dark:bg-background dark:text-foreground
-        transition-colors duration-300
-      "
-    >
-      <Navbar />
+  const spotlight = useSpotlight();
 
+  return (
+    <div className="min-h-screen bg-background text-foreground relative">
+      {spotlight && <div style={spotlight.style} />}
+      <div className="noise-overlay" />
+      <Navbar />
       <Hero />
       <Overview />
       <Technologies />

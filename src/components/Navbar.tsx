@@ -1,113 +1,113 @@
-// src/components/Navbar.tsx
-
 import { useState, useEffect } from 'react';
-import { Download } from 'lucide-react';
+import { Download, Sun, Moon, Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Button } from './ui/button';
-import { motion, useScroll } from 'framer-motion';
+import { useMagneticButton } from '../hooks/useMagneticButton';
 
-// ✅ Fix: declare process so TypeScript stops complaining — CRA injects this at build time
 declare const process: { env: { PUBLIC_URL: string } };
 
 export const Navbar = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [scrolled, setScrolled] = useState(false);
-  const { scrollY } = useScroll();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const logoRef = useMagneticButton(0.2);
 
   useEffect(() => {
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode !== null) setDarkMode(savedMode === 'true');
+    const saved = localStorage.getItem('darkMode');
+    const isDark = saved !== null ? saved === 'true' : true;
+    setDarkMode(isDark);
+    document.documentElement.classList.toggle('dark', isDark);
+    document.documentElement.classList.toggle('light', !isDark);
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    setScrolled(window.scrollY > 50);
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => {
-    const root = document.documentElement;
-    if (darkMode) {
-      root.classList.remove('light');
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-      root.classList.add('light');
-    }
-    localStorage.setItem('darkMode', darkMode.toString());
-  }, [darkMode]);
-
-  void darkMode;
-  void setDarkMode;
-  void scrollY;
-
-  const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = `${process.env.PUBLIC_URL}/resume.docx`;
-    link.download = 'Justine_Hilario_Resume.docx';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const toggleTheme = () => {
+    const next = !darkMode;
+    setDarkMode(next);
+    document.documentElement.classList.toggle('dark', next);
+    document.documentElement.classList.toggle('light', !next);
+    localStorage.setItem('darkMode', String(next));
   };
 
-  return (
-    <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={{
-        backdropFilter: scrolled ? `blur(12px)` : 'none',
-        borderBottom: scrolled ? '1px solid hsl(var(--border))' : '1px solid transparent',
-        background: scrolled ? 'hsl(var(--background) / 0.85)' : 'transparent',
-      }}
-    >
-      <div className="container mx-auto px-4 py-3 sm:py-4 flex justify-between items-center">
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="text-xl font-bold relative group cursor-pointer"
-        >
-          <span className="text-gradient relative z-10">JMH</span>
-          <motion.span
-            className="absolute -inset-2 rounded-lg bg-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          />
-        </motion.div>
+  const downloadResume = () => {
+    const a = document.createElement('a');
+    a.href = `${process.env.PUBLIC_URL}/resume.docx`;
+    a.download = 'Justine_Hilario_Resume.docx';
+    a.click();
+  };
 
-        {/* Actions */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="flex items-center gap-3"
-        >
-          <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleDownloadResume}
-              className="border-green-500/50 hover:border-green-500 hover:bg-green-500/10 rounded-xl gap-2 text-black dark:text-white hover:text-black dark:hover:text-white transition-all duration-300 text-sm px-3 sm:px-4"
-            >
-              <motion.span
-                animate={{ rotate: [0, -10, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-              >
-                <Download className="w-4 h-4" />
-              </motion.span>
-              <span className="hidden sm:inline">Resume</span>
-            </Button>
-          </motion.div>
-        </motion.div>
+  const links = [
+    { label: 'Overview', href: '#overview' },
+    { label: 'Projects', href: '#personal-projects' },
+    { label: 'Experience', href: '#career' },
+    { label: 'Contact', href: '#contact' },
+  ];
+
+  return (
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled ? 'backdrop-blur-xl bg-background/80 shadow-lg shadow-black/10' : ''
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
+        <div ref={logoRef} className="magnetic-btn">
+          <a href="#overview" className="text-lg sm:text-xl font-bold font-[Space_Grotesk] tracking-tighter inline-block">
+            <span className="text-shimmer">JMH</span>
+          </a>
+        </div>
+
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+          {links.map(l => (
+            <a key={l.label} href={l.href} className="text-xs sm:text-sm text-muted-foreground hover:text-green-400 transition-all duration-300 relative group">
+              {l.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-green-400 transition-all duration-300 group-hover:w-full" />
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <Button size="sm" onClick={downloadResume} className="hidden sm:flex rounded-lg text-xs px-3 h-8 gap-1.5 group">
+            <Download className="w-3.5 h-3.5 transition-transform duration-300 group-hover:-translate-y-0.5" /> Resume
+          </Button>
+
+          <button onClick={toggleTheme} className="hidden w-8 h-8 rounded-lg bg-muted/50 hover:bg-muted flex items-center justify-center transition-all duration-300 hover:scale-110">
+            {darkMode ? <Sun className="w-4 h-4 text-yellow-400" /> : <Moon className="w-4 h-4" />}
+          </button>
+
+          <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden w-8 h-8 rounded-lg bg-muted/50 hover:bg-muted flex items-center justify-center transition-all">
+            {menuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+          </button>
+        </div>
       </div>
 
-      {/* Animated bottom line */}
-      <motion.div
-        className="absolute bottom-0 left-0 h-px bg-gradient-to-r from-transparent via-green-500/60 to-transparent w-full"
-        initial={{ scaleX: 0, opacity: 0 }}
-        animate={{ scaleX: scrolled ? 1 : 0, opacity: scrolled ? 1 : 0 }}
-        transition={{ duration: 0.4 }}
-      />
-    </motion.nav>
+      {menuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="md:hidden bg-background/95 backdrop-blur-xl overflow-hidden shadow-lg"
+          >
+            <div className="px-4 py-4 flex flex-col gap-1">
+              {links.map(l => (
+                <a key={l.label} href={l.href} onClick={() => setMenuOpen(false)} className="text-sm py-3 px-3 text-muted-foreground hover:text-green-400 hover:bg-muted/50 rounded-lg transition-all">
+                  {l.label}
+                </a>
+              ))}
+              <Button onClick={() => { downloadResume(); setMenuOpen(false); }} className="w-full rounded-lg mt-2 text-sm">
+                <Download className="w-4 h-4 mr-2" /> Download Resume
+              </Button>
+            </div>
+          </motion.div>
+        )}
+    </motion.header>
   );
 };
