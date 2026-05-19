@@ -489,6 +489,50 @@ export const personalProjectsData: PersonalProject[] = [
     github: "",
     description: "A 360-degree biometric tracking platform for managing employee attendance, access control, and identity verification. Features include real-time monitoring, detailed reporting, automated notifications, and integration with biometric devices. Built with React, TypeScript, Laravel, and MySQL."
   },
+  {
+    id: 6,
+    name: "HR Management System",
+    subtitle: "OT & Leave Management",
+    image: getAssetPath("assets/project-icon/soon.png"),
+    subimage: [
+      {
+        src: getAssetPath("assets/project-icon/soon.png"),
+        title: "Overtime — Add",
+        subtitle: "OT Request Form",
+        description: "Add overtime form with fields: Employee Name (dropdown), Date (date picker), Start Time, End Time, Total Hours (auto-computed), Reason (textarea), Approver (dropdown), and Status (default: Pending). Validates that hours don't exceed 8 per day."
+      },
+      {
+        src: getAssetPath("assets/project-icon/soon.png"),
+        title: "Overtime — Edit",
+        subtitle: "Update OT Entry",
+        description: "Edit overtime form allowing modification of date, time range, reason, and approver. Tracks who made the change and when via an audit log. Restricted to pending entries only."
+      },
+      {
+        src: getAssetPath("assets/project-icon/soon.png"),
+        title: "Leave — Add",
+        subtitle: "Leave Request Form",
+        description: "Add leave form with fields: Employee Name (dropdown), Leave Type (sick, vacation, emergency, bereavement), Start Date, End Date, Total Days (auto-computed), Reason (textarea), and Attachments (file upload for documents). Deducts from available leave credits."
+      },
+      {
+        src: getAssetPath("assets/project-icon/soon.png"),
+        title: "Leave — Edit",
+        subtitle: "Update Leave Entry",
+        description: "Edit leave form for modifying dates, leave type, reason, and attachments. Only editable if status is Pending. Shows change history including previous values and who approved."
+      },
+    ],
+    techimage: [
+      getAssetPath("assets/dev-icon/html5.png"),
+      getAssetPath("assets/dev-icon/css.png"),
+      getAssetPath("assets/dev-icon/react-js.png"),
+      getAssetPath("assets/dev-icon/ts.png"),
+      getAssetPath("assets/dev-icon/laravel.png"),
+      getAssetPath("assets/dev-icon/mysql.png"),
+      getAssetPath("assets/dev-icon/php.png"),
+    ],
+    link: "",
+    github: "",
+    description: "A comprehensive HR Management System with Overtime and Leave management modules. Features include OT request with auto hour computation, leave credit tracking with deduction, multi-level approval workflow, audit logging for all changes, and employee profile integration. Built with React, TypeScript, Laravel, and MySQL."
+  },
 ];
 
 export const suppotingprojectsData: Project[] = [

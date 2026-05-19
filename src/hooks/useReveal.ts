@@ -1,4 +1,3 @@
-// src/hooks/useReveal.ts
 import { useEffect, useRef, useState } from 'react';
 
 export function useReveal(threshold = 0.1) {
@@ -20,5 +19,7 @@ export function useReveal(threshold = 0.1) {
     return () => observer.disconnect();
   }, [threshold]);
 
-  return { ref, revealed };
+  const fadeClass = revealed ? 'fade-in' : 'fade-out';
+
+  return { ref, revealed, fadeClass };
 }
